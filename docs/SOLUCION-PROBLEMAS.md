@@ -54,8 +54,12 @@ Busca tu síntoma en la tabla. Si no aparece, copia **el mensaje de error comple
 
 | Síntoma | Causa probable | Qué hacer |
 |---|---|---|
-| Error 404 al abrir la URL | Vercel no encuentra `index.html` | En el proyecto de Vercel → Settings → **Root Directory** = `04-proyecto/dragonball/nivel7` (o la carpeta donde esté tu `index.html`) |
-| La página carga pero sin datos | Falta el `main.js` en el repositorio | Ejecuta `npm run build`, haz commit del `main.js` y sube. Revisa que `.gitignore` no ignore `*.js` |
+| `No Output Directory named "public" found after the Build completed` | Vercel compiló, pero no encontró la carpeta que debe publicar. Casi siempre porque `nivel7` no está en la rama `main` de tu GitHub, o cambiaste los ajustes por defecto | Revisa en GitHub que `main` tiene `04-proyecto/dragonball/nivel7/`. Si no: `git checkout main`, `git merge nivel-7`, `git push`. En Vercel → Settings → General deja Root Directory, Build Command y Output Directory **sin cambios** (el `vercel.json` del repo los define) |
+| `✗ No encuentro 04-proyecto/dragonball/nivel7/index.html` en el registro de Vercel | Lo mismo: falta tu nivel 7 en `main` | Igual que arriba |
+| En el registro aparece «Todavía no hay niveles con main.ts. Crea el nivel 3 con…» | Vercel compiló un repositorio sin tus niveles (la plantilla vacía) | Despliega **tu** repositorio con tu trabajo ya unido en `main` |
+| El Build falla con errores de TypeScript | Tu `nivel7/main.ts` tiene errores de tipos | Ejecuta `npm run build` en tu computador, corrige y sube de nuevo. Vercel hace lo mismo que ese comando |
+| Error 404 al abrir la URL | Falta `index.html` dentro de `nivel7` | Comprueba que está en `04-proyecto/dragonball/nivel7/index.html` |
+| La página carga pero sin datos | La ruta del `<script src>` está mal escrita o falló el build | Debe ser `<script src="main.js"></script>`. Revisa el registro del despliegue y DevTools → Console |
 | Funciona en tu PC y no en Vercel | Mayúsculas y minúsculas en nombres de archivo (`Main.js` ≠ `main.js`) | Revisa que el nombre del `<script src>` coincida exacto con el archivo |
 
 ## Claude Code (opcional)

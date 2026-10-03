@@ -13,8 +13,7 @@ allowed-tools: Bash(git status*) Bash(git log*) Bash(git remote -v) Bash(git bra
 
 Comprueba (solo lectura) que:
 - El nivel 7 funciona en local (`npm run servir`, abre la página, prueba buscador, filtros y detalle).
-- `npm run build` compila sin errores y existe `main.js` junto al `index.html` de `04-proyecto/dragonball/nivel7/`.
-- `.gitignore` **no** ignora `*.js`.
+- `npm run build` compila sin errores y existen `index.html` y `main.ts` en `04-proyecto/dragonball/nivel7/`.
 
 Si algo falla, devuélvelo a `/asistir-proyecto`.
 
@@ -22,7 +21,7 @@ Si algo falla, devuélvelo a `/asistir-proyecto`.
 
 Antes de tocar nada, pregúntale y escucha:
 1. ¿Qué es "hacer hosting" de una página y en qué se diferencia de abrirla desde tu computador?
-2. ¿Por qué hay que subir el `main.js` compilado y no solo el `main.ts`?
+2. ¿Por qué el navegador necesita `main.js` y no `main.ts`, y quién lo genera en Vercel? (Respuesta: el `vercel.json` ejecuta `npm run build` al desplegar.)
 
 Corrige con cariño y sigue.
 
@@ -32,8 +31,7 @@ Corrige con cariño y sigue.
 2. **Juntar en `main`** (Vercel publica `main`): él escribe `git checkout main`, `git merge nivel-7` y `git push`. Explícale antes qué hace `merge`. Tú compruebas con `git log --oneline` y que `main` en GitHub tenga el proyecto.
 3. **Vercel** (en el navegador, guíalo con las pantallas):
    - Entrar con GitHub → **Add New → Project** → importar el repositorio.
-   - **Root Directory**: la carpeta donde están `index.html` y `main.js`, normalmente `04-proyecto/dragonball/nivel7`.
-   - **Framework Preset**: *Other*. Sin comando de build.
+   - **No cambiar** Root Directory, Build Command ni Output Directory: el `vercel.json` de la raíz del repositorio ya los define (instala, ejecuta `npm run build` y publica `04-proyecto/dragonball/nivel7`). Explícale qué hace ese archivo.
    - **Deploy**.
 4. **Verificación**: que abra la URL pública en su **celular**, pruebe buscador, filtros y detalle, y confirme que carga datos de la API.
 5. **Cambio y redeploy**: que haga un cambio pequeño en su código (puede pedirte la pieza en el chat, pero **él** la acomoda y la prueba), lo suba con Git y vea cómo Vercel publica la nueva versión. Pregúntale: "¿qué activó el nuevo despliegue?".
@@ -41,8 +39,10 @@ Corrige con cariño y sigue.
 
 ## Si algo falla
 
-- **404** → Root Directory incorrecto o falta `index.html` en esa carpeta.
-- **Página sin datos** → DevTools (Console y Network). Suele faltar `main.js` en el repo o la ruta del `<script>` está mal.
+- **«No Output Directory named "public" found» o «No encuentro …/nivel7/index.html»** → `nivel7` no está en `main` (falta el merge y el push) o alguien cambió los ajustes de Vercel. Pídele que revise `main` en GitHub.
+- **404** → falta `index.html` dentro de `nivel7`.
+- **Falla el Build** → que ejecute `npm run build` en local: Vercel hace lo mismo y suele ser un error de tipos.
+- **Página sin datos** → DevTools (Console y Network). Suele ser la ruta del `<script src>` mal escrita.
 - **Funciona en local y no en Vercel** → mayúsculas/minúsculas en nombres de archivo; el servidor las distingue.
 - Explica el mensaje de error, no lo arregles por él.
 

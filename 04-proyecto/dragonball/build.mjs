@@ -11,7 +11,16 @@ const niveles = readdirSync(root, { withFileTypes: true })
   .map((d) => d.name)
   .sort();
 
-const conTs = niveles.filter((n) => existsSync(join(root, n, "main.ts")));
+// En Vercel solo se compila (y se publica) el nivel 7: es tu página final.
+const enVercel = Boolean(process.env.VERCEL);
+if (enVercel && !existsSync(join(root, "nivel7", "index.html"))) {
+  console.error("✗ No encuentro 04-proyecto/dragonball/nivel7/index.html.");
+  console.error("  Vercel publica tu nivel 7. Comprueba que esa carpeta existe y que está subida a la rama main de tu repositorio");
+  console.error("  (en tu computador: git checkout main, git merge nivel-7, git push).");
+  process.exit(1);
+}
+
+const conTs = niveles.filter((n) => existsSync(join(root, n, "main.ts")) && (!enVercel || n === "nivel7"));
 
 if (conTs.length === 0) {
   console.log("Todavía no hay niveles con main.ts.");
