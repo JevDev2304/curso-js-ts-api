@@ -142,6 +142,106 @@ En Vercel le indicas esa rama en **Settings → Environments → Production → 
 
 ---
 
+## 3b. Cómo leer lo que Git te dice (con ejemplos reales)
+
+Git siempre te cuenta qué está pasando. Aprender a leerlo es la mitad del trabajo.
+
+**1) Acabas de crear archivos nuevos**
+
+```text
+$ git status
+On branch nivel-1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        04-proyecto/dragonball/nivel1/
+
+nothing added to commit but untracked files present
+```
+
+> «Estás en la rama `nivel-1`. Hay archivos nuevos que todavía no sigo.» → `git add .`
+
+**2) Los preparaste**
+
+```text
+$ git add .
+$ git status
+On branch nivel-1
+Changes to be committed:
+        new file:   04-proyecto/dragonball/nivel1/index.html
+```
+
+> «Están en la caja, listos para el commit.» → `git commit -m "..."`
+
+**3) Hiciste el commit**
+
+```text
+$ git commit -m "Nivel 1: HTML con 5 personajes"
+[nivel-1 5be30ca] Nivel 1: HTML con 5 personajes
+ 1 file changed, 40 insertions(+)
+ create mode 100644 04-proyecto/dragonball/nivel1/index.html
+
+$ git status
+On branch nivel-1
+nothing to commit, working tree clean
+```
+
+> `5be30ca` es el código de tu commit. «Working tree clean» = todo está guardado.
+
+**4) Lo subiste a GitHub**
+
+```text
+$ git push -u origin nivel-1
+ * [new branch]      nivel-1 -> nivel-1
+branch 'nivel-1' set up to track 'origin/nivel-1'.
+
+$ git log --oneline
+5be30ca (HEAD -> nivel-1, origin/nivel-1) Nivel 1: HTML con 5 personajes
+```
+
+> `origin/nivel-1` junto al commit confirma que GitHub tiene el mismo punto que tu computador.
+
+**5) Cambiaste un archivo que ya estaba guardado**
+
+```text
+$ git status
+On branch nivel-1
+Changes not staged for commit:
+        modified:   04-proyecto/dragonball/nivel1/index.html
+```
+
+> «Modificaste este archivo y todavía no lo preparas.» → `git add .` y `git commit`.
+
+**6) Intentas cambiar de rama sin haber guardado**
+
+```text
+$ git checkout main
+error: Your local changes to the following files would be overwritten by checkout:
+        04-proyecto/dragonball/nivel1/index.html
+Please commit your changes or stash them before you switch branches.
+Aborting
+```
+
+> Git te protege: no te deja cambiar de rama para que no pierdas cambios. Haz `git add .` y `git commit`, y vuelve a intentar.
+
+> Si tu Git está en español, los mensajes dicen lo mismo con otras palabras («En la rama…», «nada para hacer commit»).
+
+### Qué es `.gitignore`
+
+Es un archivo que le dice a Git **qué no subir**. En este repositorio ya ignora `node_modules/` (la carpeta de dependencias, que se recrea con `npm install`) y archivos del sistema. No lo borres.
+
+### Preguntas que todos se hacen
+
+| Pregunta | Respuesta corta |
+|---|---|
+| ¿Pierdo mi trabajo al cambiar de rama? | No: queda guardado en su rama. Pero primero tienes que hacer `add` y `commit` de lo que tengas pendiente |
+| ¿Cuándo hago commit? | Cada vez que algo funciona. Mejor varios commits pequeños que uno gigante |
+| Hice `commit` pero GitHub no lo muestra | Falta el `git push`. El commit solo se guarda en tu computador |
+| ¿Qué es `origin`? | El nombre por defecto de tu repositorio en GitHub |
+| ¿Qué es `HEAD`? | La rama (y el commit) donde estás parado ahora mismo |
+| ¿Puedo borrar algo que ya hice commit? | Sí, y el historial lo recuerda: siempre puedes volver a un commit anterior |
+
+---
+
 ## 4. Lo que debes entregar sobre Git
 
 1. Tu repositorio de GitHub es **público** (Settings → General → *Danger Zone* → *Change visibility* → Public, o márcalo como Public al crearlo). Tu profesor necesita poder verlo y Vercel lo necesita para publicarlo.

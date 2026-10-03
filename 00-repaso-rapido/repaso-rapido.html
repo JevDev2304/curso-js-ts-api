@@ -215,16 +215,109 @@ function esPokemon(v: unknown): v is Pokemon {      // type guard
 
 <section id="git">
 <h2>8 · Git <small>nuevo · docs/GIT-BASICO.md</small></h2>
-<p class="idea">Git guarda el <b>historial</b> de tu proyecto; GitHub lo guarda en internet. Una <b>rama</b> es una línea de trabajo independiente.</p>
-<pre class="code" data-lang="sh">git status                    # ¿dónde estoy y qué cambió?
-git checkout -b nivel-1       # crear rama y moverme a ella
-git add .                     # preparar cambios
-git commit -m "Nivel 1: HTML" # guardar en mi historial (local)
-git push -u origin nivel-1    # subir la rama a GitHub (primera vez)
-git checkout nivel-3          # moverme a otra rama
+<p class="idea">Git guarda el <b>historial</b> de tu proyecto y te deja volver atrás; GitHub guarda una copia en internet. Una <b>rama</b> es una línea de trabajo independiente.</p>
+
+<h3>¿Para qué sirve?</h3>
+<div class="grid">
+  <div class="card"><h3>Sin Git</h3><p>Carpetas como <code>proyecto_final</code>, <code>proyecto_final2</code>, <code>proyecto_final_ahora_si</code>. Si algo se rompe, no sabes qué cambió ni cómo volver.</p></div>
+  <div class="card"><h3>Con Git</h3><p>Un solo proyecto con un historial de «puntos de guardado» con mensaje. Puedes ver qué hiciste, cuándo, y probar cosas sin dañar lo que ya funciona.</p></div>
+</div>
+<p>Y <b>GitHub</b> sirve para tres cosas: respaldar tu trabajo en internet, compartirlo (tu profesor lo ve) y que servicios como <b>Vercel</b> lo lean para publicar tu página.</p>
+
+<h3>Las palabras que vas a oír</h3>
+<div class="tablewrap"><table>
+<tr><th>Palabra</th><th>Qué es</th><th>Analogía</th></tr>
+<tr><td><b>Repositorio</b></td><td>Tu carpeta del proyecto más su historial (una carpeta oculta llamada <code>.git</code>)</td><td>El cuaderno completo con todas sus páginas</td></tr>
+<tr><td><b>Commit</b></td><td>Un punto de guardado: una «foto» de todo tu proyecto con un mensaje y un código (por ejemplo <code>5be30ca</code>)</td><td>«Guardé la partida aquí: terminé el nivel 1»</td></tr>
+<tr><td><b>Rama (branch)</b></td><td>Una línea de commits independiente. Al cambiar de rama, <b>tus archivos cambian</b> para mostrar cómo estaban en esa rama</td><td>Un universo alterno donde pruebas sin dañar el principal</td></tr>
+<tr><td><b>Zona de preparación</b> (staging)</td><td>Lo que marcaste con <code>git add</code> para el próximo commit</td><td>La caja donde pones cosas antes de sellarla</td></tr>
+<tr><td><b>Remoto</b> (<code>origin</code>)</td><td>La copia de tu repositorio que está en GitHub</td><td>La partida guardada en la nube</td></tr>
+</table></div>
+
+<h3>El recorrido de tu trabajo</h3>
+<div class="flow"><span>Editas archivos</span><i>→ <code>git add</code> →</i><span>Zona de preparación</span><i>→ <code>git commit</code> →</i><span>Historial local</span><i>→ <code>git push</code> →</i><span>GitHub</span></div>
+<p><code>commit</code> guarda <b>solo en tu computador</b>. Hasta que no haces <code>push</code>, GitHub no se entera. <code>pull</code> hace el camino contrario: trae de GitHub lo que no tienes.</p>
+
+<h3>Los comandos del proyecto</h3>
+<pre class="code" data-lang="sh">git status                    # ¿dónde estoy y qué cambió? (tu brújula)
+git checkout -b nivel-1       # crear la rama nivel-1 y moverme a ella
+git add .                     # preparar TODOS los cambios (el punto = todo)
+git commit -m "Nivel 1: HTML" # guardar un punto en mi historial local
+git push -u origin nivel-1    # subir la rama a GitHub (la primera vez lleva -u origin)
+git push                      # las siguientes veces basta con esto
+git checkout nivel-3          # moverme a una rama que ya existe
+git branch                    # listar mis ramas (la que tiene * es donde estoy)
+git log --oneline             # ver mis commits, uno por línea
 git pull                      # traer lo nuevo de GitHub</pre>
-<div class="flow"><span>Tu carpeta</span><i>→ add →</i><span>Preparación</span><i>→ commit →</i><span>Historial local</span><i>→ push →</i><span>GitHub</span></div>
-<div class="card trap"><strong>Error típico</strong><p>Cambiar de rama con cambios sin guardar, o olvidar el <code>push</code>: sin push, GitHub no se entera.</p></div>
+
+<h3>Un ejemplo completo, con lo que verás en pantalla</h3>
+<p>Estás en la rama <code>nivel-1</code> y acabas de crear tu <code>index.html</code>:</p>
+<pre class="code" data-lang="txt">$ git status
+On branch nivel-1
+Untracked files:
+  (use "git add &lt;file&gt;..." to include in what will be committed)
+        04-proyecto/dragonball/nivel1/
+
+nothing added to commit but untracked files present</pre>
+<p>Git te dice: «hay archivos nuevos que todavía no sigo». Los preparas:</p>
+<pre class="code" data-lang="txt">$ git add .
+$ git status
+On branch nivel-1
+Changes to be committed:
+        new file:   04-proyecto/dragonball/nivel1/index.html</pre>
+<p>Están en la caja (zona de preparación), listos para sellar. Ahora el commit:</p>
+<pre class="code" data-lang="txt">$ git commit -m "Nivel 1: HTML con 5 personajes"
+[nivel-1 5be30ca] Nivel 1: HTML con 5 personajes
+ 1 file changed, 40 insertions(+)
+ create mode 100644 04-proyecto/dragonball/nivel1/index.html
+
+$ git status
+On branch nivel-1
+nothing to commit, working tree clean</pre>
+<p>«Working tree clean» significa que todo está guardado. Falta subirlo a GitHub:</p>
+<pre class="code" data-lang="txt">$ git push -u origin nivel-1
+ * [new branch]      nivel-1 -&gt; nivel-1
+branch 'nivel-1' set up to track 'origin/nivel-1'.
+
+$ git log --oneline
+5be30ca (HEAD -&gt; nivel-1, origin/nivel-1) Nivel 1: HTML con 5 personajes</pre>
+<p>Ya está en tu GitHub. <code>origin/nivel-1</code> junto al commit confirma que GitHub tiene el mismo punto que tu computador.</p>
+<div class="card tip"><strong>Si tu Git habla español</strong><p>Según cómo esté instalado, los mensajes pueden salir en español («En la rama nivel-1», «nada para hacer commit»). Significan lo mismo.</p></div>
+
+<h3>Cómo leer <code>git status</code></h3>
+<div class="tablewrap"><table>
+<tr><th>Lo que dice</th><th>Significa</th><th>Qué hacer</th></tr>
+<tr><td><code>Untracked files</code></td><td>Archivos nuevos que Git todavía no sigue</td><td><code>git add .</code></td></tr>
+<tr><td><code>Changes not staged for commit</code> + <code>modified:</code></td><td>Cambiaste archivos que ya seguía, pero no los has preparado</td><td><code>git add .</code></td></tr>
+<tr><td><code>Changes to be committed</code></td><td>Están preparados, esperando el commit</td><td><code>git commit -m "..."</code></td></tr>
+<tr><td><code>nothing to commit, working tree clean</code></td><td>Todo está guardado</td><td>Nada: ya puedes <code>push</code> o cambiar de rama</td></tr>
+<tr><td><code>Your branch is ahead of 'origin/...' by 1 commit</code></td><td>Tienes commits que GitHub no tiene</td><td><code>git push</code></td></tr>
+</table></div>
+
+<h3>Ramas de este proyecto</h3>
+<p>Cada nivel va en su rama y <b>nace de la anterior</b>, así tu trabajo se va acumulando:</p>
+<pre class="code" data-lang="txt">main      ●  materiales del curso
+           \
+nivel-1     ●──●  Nivel 1: HTML
+                \
+nivel-2          ●──●  Nivel 2: CSS
+                     \
+nivel-3               ●──●  Nivel 3: datos en memoria
+                          \
+                           ...  hasta nivel-7  (y nivel-8 si haces el bonus)</pre>
+<p>La <b>rama</b> se llama <code>nivel-1</code> (con guion) y la <b>carpeta</b> <code>nivel1</code> (sin guion): son cosas distintas.</p>
+
+<h3>Preguntas que todos se hacen</h3>
+<div class="tablewrap"><table>
+<tr><th>Pregunta</th><th>Respuesta corta</th></tr>
+<tr><td>¿Pierdo mi trabajo al cambiar de rama?</td><td>No: queda guardado en su rama. Pero Git no te deja cambiar si tienes cambios sin guardar: haz <code>add</code> y <code>commit</code> primero.</td></tr>
+<tr><td>¿Cuándo hago commit?</td><td>Cada vez que algo funciona. Mejor varios commits pequeños que uno gigante.</td></tr>
+<tr><td>¿Cómo escribo el mensaje?</td><td>Corto y diciendo qué lograste: <code>Nivel 4: getJSON y adaptador</code>. Evita «cambios» o «listo».</td></tr>
+<tr><td>¿Por qué no se sube <code>node_modules</code>?</td><td>El archivo <code>.gitignore</code> le dice a Git qué ignorar. Esa carpeta se vuelve a crear con <code>npm install</code>.</td></tr>
+<tr><td>Hice <code>commit</code> pero GitHub no lo muestra</td><td>Falta el <code>git push</code>.</td></tr>
+<tr><td>¿Qué es <code>origin</code>?</td><td>El nombre por defecto de tu repositorio en GitHub.</td></tr>
+</table></div>
+
 <div class="card tip"><strong>Más adelante, en Angular</strong><p>Aquí solo ves lo básico para guardar y subir tu trabajo. Después se retoma y se amplía: Pull Requests, Issues, hotfixes y el flujo de ramas en equipo.</p></div>
 </section>
 
@@ -290,6 +383,7 @@ document.getElementById('themeBtn').addEventListener('click', function () {
   function mk(lang) { var hash = (lang === 'sh' || lang === 'toml') ? '|#[^\\n]*' : ''; return new RegExp('(\\/\\/[^\\n]*|\\/\\*[\\s\\S]*?\\*\\/|&lt;!--[\\s\\S]*?--&gt;' + hash + ')|("(?:\\\\.|[^"\\\\\\n])*"|\'(?:\\\\.|[^\'\\\\\\n])*\'|`(?:\\\\.|[^`\\\\])*`)|(\\b\\d[\\d_.]*\\b)|([A-Za-z_$][\\w$-]*)', 'g'); }
   document.querySelectorAll('pre.code').forEach(function (pre) {
     var lang = pre.dataset.lang;
+    if (lang === 'txt') return;
     var src = pre.innerHTML;  // ya viene con &lt; &gt; &amp; escapados
     var re = mk(lang), out = '', last = 0, m;
     while ((m = re.exec(src))) {
