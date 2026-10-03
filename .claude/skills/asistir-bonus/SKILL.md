@@ -37,14 +37,15 @@ Corrige con cariño y sigue.
    - Entrar con GitHub → **Add New → Project** → importar el repositorio.
    - **No cambiar** Root Directory, Build Command ni Output Directory: el `vercel.toml` de la raíz del repositorio ya los define (instala, ejecuta `npm run build` y publica `04-proyecto/dragonball/nivel7`). Explícale qué hace ese archivo.
    - Advierte que el **primer despliegue puede fallar** porque Vercel empieza por `main`, que no tiene `nivel7`. Es normal.
-   - En **Settings → Git → Production Branch** poner `nivel-8` y hacer **Redeploy**.
+   - En **Settings → Environments → Production → Branch Tracking** cambiar la rama a `nivel-8` y **Save**.
+   - **Deployments → Create Deployment**, escribir `nivel-8` y crear. Advierte que **Redeploy no deja elegir otra rama** (repite el último despliegue, de `main`).
 4. **Verificación**: que abra la URL pública en su **celular**, pruebe buscador, filtros y detalle, y confirme que carga datos de la API.
 5. **Cambio y redeploy**: que haga un cambio pequeño en su código (puede pedirte la pieza en el chat, pero **él** la acomoda y la prueba), lo suba con Git y vea cómo Vercel publica la nueva versión. Pregúntale: "¿qué activó el nuevo despliegue?".
 6. Recuérdale poner la **URL en su README** y adjuntar una captura desde el celular.
 
 ## Si algo falla
 
-- **«No Output Directory named "public" found» o «No encuentro …/nivel7/index.html»** → Vercel está desplegando una rama sin `nivel7` (por ejemplo `main`) o falta el `git push` de `nivel-8`, o alguien cambió los ajustes. Que revise Production Branch (`nivel-8`) y que la rama muestre `nivel7` en GitHub.
+- **«No Output Directory named "public" found» o «No encuentro …/nivel7/index.html»** → Vercel está desplegando una rama sin `nivel7` (por ejemplo `main`) o falta el `git push` de `nivel-8`, o alguien cambió los ajustes. Que revise el Branch Tracking de Production (`nivel-8`) y que la rama muestre `nivel7` en GitHub.
 - **404** → falta `index.html` dentro de `nivel7`.
 - **Falla el Build** → que ejecute `npm run build` en local: Vercel hace lo mismo y suele ser un error de tipos.
 - **Página sin datos** → DevTools (Console y Network). Suele ser la ruta del `<script src>` mal escrita.
