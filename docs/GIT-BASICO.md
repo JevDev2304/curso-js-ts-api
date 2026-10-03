@@ -2,6 +2,8 @@
 
 En este proyecto vas a usar Git de verdad: **una rama por nivel**, subida a **tu GitHub**. Esta guía tiene lo justo, sin complicarlo.
 
+> **Git es tema nuevo:** no se vio en clase, así que no se espera que lo sepas de antes. Lo aprendes aquí, practicando. Más adelante, mientras trabajan Angular, se retomará todo esto y se verán más cosas: **Pull Requests, Issues, hotfixes** y el trabajo en equipo con ramas. Por ahora basta con lo de esta guía.
+
 > 🎬 **Empieza por aquí (2 min 30 s):** [¿Qué es Git y GitHub? Repositorios, ramas y mucho más](https://www.youtube.com/watch?v=DinilgacaWs). Te da la idea general de qué es Git, GitHub, un repositorio y una rama antes de ver los comandos.
 >
 > 🎥 **Para profundizar:** [Curso de Git y GitHub (desde cero)](https://www.youtube.com/watch?v=T3roQrB_Jko&list=PLJ7sTTLrIA6klMtrvcpGXYkBFoUP3rqwo) (en español; es una lista de reproducción). Míralo antes de empezar o cuando algo no te cuadre. No tienes que verlo completo: con esta guía alcanza para el proyecto.

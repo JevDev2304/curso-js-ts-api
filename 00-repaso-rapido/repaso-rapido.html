@@ -72,6 +72,7 @@ footer{color:var(--muted);font-size:14px;border-top:1px solid var(--border);marg
   <a href="#ts">6 · TypeScript</a>
   <div class="grp">Cómo se arma una app</div>
   <a href="#arquitectura">7 · Datos → pantalla</a>
+  <div class="grp">Nuevo: se aprende en el proyecto</div>
   <a href="#git">8 · Git</a>
   <a href="#deploy">9 · Publicar</a>
   <div class="grp">Cierre</div>
@@ -82,7 +83,7 @@ footer{color:var(--muted);font-size:14px;border-top:1px solid var(--border);marg
 <header class="hero">
   <p class="mod">Módulo · Fundamentos de Frontend</p>
   <h1>Repaso <span>rápido</span> de toda la teoría</h1>
-  <p>Una página para repasar en 20 minutos lo esencial del módulo: cada tema en una idea, un ejemplo mínimo y el error más típico. Sirve de mapa antes del proyecto y de chuleta mientras lo haces. Para profundizar, cada tema indica dónde está el material completo.</p>
+  <p>Una página para repasar en 20 minutos lo esencial del módulo: cada tema en una idea, un ejemplo mínimo y el error más típico. Sirve de mapa antes del proyecto y de chuleta mientras lo haces. Los temas 1 a 7 se vieron en clase. <b>Git y publicar en internet (temas 8 y 9) no se vieron en clase: se aprenden dentro de este proyecto</b> y se retoman más adelante, en Angular.</p>
 </header>
 
 <section id="web">
@@ -213,7 +214,7 @@ function esPokemon(v: unknown): v is Pokemon {      // type guard
 </section>
 
 <section id="git">
-<h2>8 · Git <small>docs/GIT-BASICO.md</small></h2>
+<h2>8 · Git <small>nuevo · docs/GIT-BASICO.md</small></h2>
 <p class="idea">Git guarda el <b>historial</b> de tu proyecto; GitHub lo guarda en internet. Una <b>rama</b> es una línea de trabajo independiente.</p>
 <pre class="code" data-lang="sh">git status                    # ¿dónde estoy y qué cambió?
 git checkout -b nivel-1       # crear rama y moverme a ella
@@ -224,10 +225,11 @@ git checkout nivel-3          # moverme a otra rama
 git pull                      # traer lo nuevo de GitHub</pre>
 <div class="flow"><span>Tu carpeta</span><i>→ add →</i><span>Preparación</span><i>→ commit →</i><span>Historial local</span><i>→ push →</i><span>GitHub</span></div>
 <div class="card trap"><strong>Error típico</strong><p>Cambiar de rama con cambios sin guardar, o olvidar el <code>push</code>: sin push, GitHub no se entera.</p></div>
+<div class="card tip"><strong>Más adelante, en Angular</strong><p>Aquí solo ves lo básico para guardar y subir tu trabajo. Después se retoma y se amplía: Pull Requests, Issues, hotfixes y el flujo de ramas en equipo.</p></div>
 </section>
 
 <section id="deploy">
-<h2>9 · Publicar en internet <small>nivel 8</small></h2>
+<h2>9 · Publicar en internet <small>nuevo · bonus nivel 8</small></h2>
 <p class="idea">Vercel lee tu repositorio de GitHub y publica tu página con una URL pública. Cada <code>git push</code> a la rama publicada vuelve a desplegar.</p>
 <pre class="code" data-lang="toml"># vercel.toml: las 3 preguntas de Vercel
 installCommand = "npm install"            # ¿qué instalo?
@@ -267,7 +269,7 @@ outputDirectory = "04-proyecto/dragonball/nivel7"  # ¿qué carpeta publico?</pr
 <details class="q"><summary>6. Tu <code>interface</code> dice <code>number</code> pero la API manda texto. ¿Qué pasa al ejecutar?</summary><p>Nada lo detecta: los tipos se borran al compilar y el dato sigue siendo texto.</p></details>
 <details class="q"><summary>7. ¿Por qué el navegador carga <code>main.js</code> y no <code>main.ts</code>?</summary><p>El navegador no entiende TypeScript; el compilador lo convierte a JavaScript.</p></details>
 <details class="q"><summary>8. ¿Para qué sirve un adaptador?</summary><p>Convierte la forma del JSON de la API a la forma que usa tu aplicación, y aísla los cambios de la API en un solo lugar.</p></details>
-<details class="q"><summary>9. ¿Qué diferencia hay entre <code>git add</code>, <code>commit</code> y <code>push</code>?</summary><p><code>add</code> prepara los cambios, <code>commit</code> los guarda en tu historial local y <code>push</code> los envía a GitHub.</p></details>
+<details class="q"><summary>9. (Tema nuevo del proyecto) ¿Qué diferencia hay entre <code>git add</code>, <code>commit</code> y <code>push</code>?</summary><p><code>add</code> prepara los cambios, <code>commit</code> los guarda en tu historial local y <code>push</code> los envía a GitHub.</p></details>
 <details class="q"><summary>10. ¿Qué tres preguntas contesta <code>vercel.toml</code>?</summary><p>Qué instalo, cómo construyo y qué carpeta publico.</p></details>
 </section>
 

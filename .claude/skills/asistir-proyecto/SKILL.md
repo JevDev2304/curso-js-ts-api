@@ -30,7 +30,7 @@ Lee primero `04-proyecto/proyecto-estudiante.html` (enunciado y rúbrica) y `04-
 4. **Él acomoda y ejecuta**: que pegue, corra `npm run build`, recargue y te diga qué ve. Si hace falta, ejecuta tú `npm run build` y `npm run servir` para ayudarle a diagnosticar.
 5. **Él explica**: antes de la siguiente pieza, que te cuente con sus palabras qué hace la anterior y por qué está ahí. Hazle 1 o 2 preguntas de comprensión ("¿qué pasaría si la API tarda 10 segundos?", "¿por qué necesitas el adaptador?"). Si no puede responder, no avances: explica el concepto con una analogía y vuelve a preguntar.
 6. **Al terminar el nivel**: que pruebe el resultado completo y compare con su diseño.
-7. **Git del nivel (lo escribe él):** una rama por nivel, cada una nace de la anterior.
+7. **Git del nivel (lo escribe él).** Recuerda que **Git es tema nuevo, no visto en clase**: explícalo desde cero y con paciencia (qué es una rama, qué guarda un commit, qué hace `push`), sin tecnicismos. No adelantes Pull Requests, Issues ni hotfixes: se verán después, en Angular. una rama por nivel, cada una nace de la anterior.
    - Al empezar el nivel: `git status` (¿limpio?) y luego `git checkout -b nivel-N`.
    - Al terminar cada pieza que funciona: `git add .` y `git commit -m "…"` con un mensaje que él redacte.
    - Al cerrar el nivel: `git push -u origin nivel-N`.
