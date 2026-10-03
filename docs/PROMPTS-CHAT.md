@@ -21,7 +21,9 @@ Cómo trabajamos: tú me propones el código, yo lo acomodo en VS Code, lo ejecu
 7. No escribas mis respuestas de análisis ni mi README: eso lo hago yo con mis palabras. Sí puedes decirme si hay un error conceptual en lo que escribí.
 8. Respóndeme en español, con frases cortas.
 
-Mi nivel: estoy empezando. Ya vi HTML, CSS, JavaScript básico, async/await, fetch y TypeScript básico (tipos, interfaces, genéricos).
+9. Git es NUEVO para mí (no lo vimos en clase). Cuando lo necesitemos, explícame cada comando antes de que lo escriba (qué cambia y dónde: mi carpeta, mi historial local o GitHub). Los comandos de Git los escribo yo.
+
+Mi nivel: estoy empezando. Ya vi HTML, CSS, JavaScript básico, async/await, fetch y TypeScript básico (tipos, interfaces, genéricos). No he visto Git ni cómo publicar una página en internet.
 
 Empieza preguntándome en qué nivel voy y qué quiero lograr hoy.
 ```
@@ -53,6 +55,12 @@ Corrígeme si me equivoqué en algo, hazme 1 o 2 preguntas para comprobar que en
 
 ```text
 Quiero repasar [HTML y CSS / JavaScript / async y await / fetch / TypeScript]. Hazme una pregunta a la vez, empezando por lo básico. Si respondo bien, sube la dificultad; si fallo, dame una pista o una analogía y vuelve a preguntarme. Al final de cada tema dame un mini quiz de 3 preguntas y dime qué debería repasar.
+```
+
+## 2b. Para aprender Git desde cero (no se vio en clase)
+
+```text
+Quiero aprender Git desde cero: no lo he visto antes. Enséñamelo de a un concepto por vez, con una analogía simple, empezando por: qué es un repositorio, un commit y una rama. Después los comandos: status, checkout -b, add, commit, push y pull. Después de cada concepto pídeme que escriba un comando en mi terminal (en un repositorio de práctica, no en mi proyecto) y que te pegue lo que me salió, para que me expliques el resultado. No me des todo junto ni ejecutes nada por mí. Al final hazme un mini quiz de 3 preguntas.
 ```
 
 ## 3. Para entender un error (pega tu error completo)
@@ -97,7 +105,17 @@ Dime qué detalles faltan para que el resultado sea mejor (pantallas, estados, j
 ## 7. Para el bonus de Vercel
 
 ```text
-Quiero publicar mi página en Vercel. Antes de empezar, hazme 2 preguntas para comprobar que entiendo qué es el hosting y por qué hay que subir el main.js compilado. Después guíame paso a paso, de a una acción por vez, y dime cómo comprobar que funcionó. Si algo falla, ayúdame a entender el error en vez de darme la solución.
+Quiero publicar mi página en Vercel desplegando mi rama nivel-8. Mi repositorio de GitHub es público y tengo un archivo vercel.toml en la raíz.
+
+Antes de empezar hazme 2 preguntas para comprobar que entiendo: (1) qué es hacer hosting, y (2) qué le dice vercel.toml a Vercel (qué instalo, cómo construyo y qué carpeta publico) y quién genera el main.js cuando se despliega.
+
+Después guíame paso a paso, de a UNA acción por vez, y dime cómo comprobar cada paso: importar mi repositorio en Vercel, cambiar la rama de producción a nivel-8 (Settings → Environments → Production → Branch Tracking), crear el despliegue de esa rama (Deployments → Create Deployment; Redeploy no cambia de rama) y comprobar en una ventana de incógnito que la página se abre sin pedir iniciar sesión (Deployment Protection). Los comandos de Git los escribo yo. Si algo falla, ayúdame a entender el error en vez de darme la solución.
+```
+
+## 8. Para entender un comando de Git antes de ejecutarlo
+
+```text
+Voy a ejecutar este comando de Git: [comando]. Explícame qué va a hacer (qué cambia y dónde: mi carpeta, mi historial local o GitHub) y qué mensaje debería ver si sale bien. No lo ejecutes por mí: lo escribo yo. Cuando te cuente el resultado, dime si es lo esperado.
 ```
 
 ---

@@ -11,9 +11,10 @@ Busca tu síntoma en la tabla. Si no aparece, copia **el mensaje de error comple
 | `git no se reconoce` / `command not found: git` | Git no está instalado | Instálalo (ver [INSTALACION.md](INSTALACION.md)) y abre una terminal nueva |
 | `Author identity unknown` al hacer `git commit` | No configuraste tu nombre y correo | `git config --global user.name "Tu Nombre"` y `git config --global user.email "tu@correo.com"` |
 | `code no se reconoce` | El comando `code` no está en el PATH | Abre la carpeta con **File → Open Folder** en VS Code. En Mac: `Cmd+Shift+P` → *Install 'code' command in PATH* |
-| `npm install` falla con `EACCES` (permisos) | Estás ejecutando en una carpeta protegida o con `sudo` antes | No uses `sudo`. Clona el repositorio en una carpeta tuya (`Documentos`) y repite |
+| `npm install` falla con `EACCES` (permisos) | Estás ejecutando en una carpeta protegida o con `sudo` antes | No uses `sudo`. Clona el repositorio en una carpeta tuya (`Documents`) y repite |
 | `npm install` falla con `ENOTFOUND` / `network` | Sin internet, VPN o proxy | Revisa tu conexión, desactiva la VPN y repite |
 | `npm run verificar` marca ✗ en **Dependencias** | No ejecutaste `npm install` | Ejecuta `npm install` en la **raíz** del repositorio (la carpeta que contiene `package.json`) |
+| `npm run verificar` marca ✗ en **API PokéAPI** o **API Dragon Ball** | Sin conexión, VPN o proxy, o la API está caída un momento | Revisa tu internet y desactiva la VPN. Si solo falla una, espera unos minutos y repite. Sin conexión no funcionan los pasos que usan la API |
 | `npm ERR! enoent ... package.json` | Estás en la carpeta equivocada | Usa `cd` hasta la raíz del repositorio. Debe verse `package.json` al ejecutar `ls` / `dir` |
 
 ## Materiales y servidor
@@ -46,9 +47,17 @@ Busca tu síntoma en la tabla. Si no aparece, copia **el mensaje de error comple
 | Síntoma | Causa probable | Qué hacer |
 |---|---|---|
 | `Permission denied` / `Authentication failed` al hacer `git push` | GitHub ya no acepta contraseñas en la terminal | Usa **GitHub Desktop**, o crea un *Personal Access Token* (Settings → Developer settings), o inicia sesión con `gh auth login` si tienes GitHub CLI |
+| `git clone` dice `Repository not found` | La dirección está mal escrita o el repositorio es privado | Copia la dirección desde el botón verde **Code** de GitHub. Tu repositorio debe ser **público** (Settings → General → Change visibility) |
+| No veo el botón **Use this template** | Estás en una copia que ya no es la plantilla, o no iniciaste sesión | Inicia sesión en GitHub y entra al repositorio original: <https://github.com/JevDev2304/curso-js-ts-api>. Si sigue sin aparecer, usa **Fork** |
 | `fatal: not a git repository` | Estás fuera de la carpeta del repositorio | `cd` hasta la raíz del repositorio |
 | `rejected ... non-fast-forward` | El repositorio remoto tiene cambios que no tienes | `git pull` y luego `git push` |
+| Hice `commit` pero GitHub no muestra mis cambios | El commit solo está en tu computador | `git push` (la primera vez de una rama: `git push -u origin nombre-de-la-rama`) |
+| `fatal: a branch named 'nivel-1' already exists` | Esa rama ya existe | Muévete a ella con `git checkout nivel-1` (sin `-b`) |
+| `error: Your local changes ... would be overwritten by checkout` | Tienes cambios sin guardar y quieres cambiar de rama | `git add .` y `git commit -m "..."`, y vuelve a intentar |
+| `The current branch ... has no upstream branch` | Es la primera vez que subes esa rama | `git push -u origin nombre-de-la-rama` |
 | Subí `node_modules` por error | Falta el `.gitignore` | Ya viene en el repositorio; no lo borres. Pide ayuda para quitarlo del historial |
+
+> Más ejemplos de lo que Git te dice y qué hacer: [`GIT-BASICO.md`](GIT-BASICO.md#3b-cómo-leer-lo-que-git-te-dice-con-ejemplos-reales).
 
 ## Vercel (bonus)
 
@@ -71,8 +80,10 @@ Busca tu síntoma en la tabla. Si no aparece, copia **el mensaje de error comple
 
 | Síntoma | Causa probable | Qué hacer |
 |---|---|---|
-| `claude: command not found` | Claude Code no está instalado o el PATH no se actualizó | Instálalo (ver [USAR-IA.md](USAR-IA.md)), cierra y abre la terminal. Ejecuta `claude doctor` para diagnosticar |
+| `claude: command not found` | Claude Code no está instalado o el PATH no se actualizó | Instálalo (ver [USAR-IA.md](USAR-IA.md#instalación)), cierra y abre la terminal. Ejecuta `claude doctor` para diagnosticar |
 | Dice que no tienes acceso | Se necesita un plan de pago (Pro o superior) | Inicia sesión con una cuenta que lo tenga |
+| Claude Code me pide permiso para cada comando | Es normal: pide confirmación antes de ejecutar comandos | Acepta los del curso (`npm install`, `npm run verificar`, `npm run build`…). Si no entiendes uno, pregúntale qué hace antes de aceptar |
+| Claude Code no ejecuta `git add`, `commit` ni `push` por mí | Es a propósito: los comandos de Git los escribes tú para aprender | Pídele que te explique qué hace el comando y cuál escribir, y ejecútalo tú. Luego puede comprobar el resultado con `git status` |
 | «BLOQUEADO por el tutor» | El guardarraíl impidió que Claude escribiera tus archivos | Es intencional: Claude te entrega el código en la conversación y tú lo acomodas en VS Code. Pídele la pieza en el chat |
 
 ## Cuando nada de lo anterior sirve
