@@ -62,7 +62,7 @@ Los prompts listos para esto están en [`../docs/PROMPTS-CHAT.md`](../docs/PROMP
 
 ## Guarda tu avance con Git: una rama por nivel
 
-Cada nivel va en su propia rama, y cada rama nace de la anterior. Los comandos los escribes tú (guía completa en [`../docs/GIT-BASICO.md`](../docs/GIT-BASICO.md); video recomendado: [Curso de Git y GitHub (desde cero)](https://www.youtube.com/watch?v=T3roQrB_Jko&list=PLJ7sTTLrIA6klMtrvcpGXYkBFoUP3rqwo)).
+Cada nivel va en su propia rama, y cada rama nace de la anterior. Empieza con el [video introductorio de 2:30](https://www.youtube.com/watch?v=DinilgacaWs). Los comandos los escribes tú (guía completa en [`../docs/GIT-BASICO.md`](../docs/GIT-BASICO.md); video recomendado: [Curso de Git y GitHub (desde cero)](https://www.youtube.com/watch?v=T3roQrB_Jko&list=PLJ7sTTLrIA6klMtrvcpGXYkBFoUP3rqwo)).
 
 ```bash
 git status                       # ¿dónde estoy y qué cambió?
