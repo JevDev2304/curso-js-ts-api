@@ -29,7 +29,7 @@ Empieza leyendo `README.md` y `04-proyecto/proyecto-estudiante.html` si necesita
   3. **por qué va ahí**, en una o dos frases.
   Mantén cada pieza corta (alrededor de 40 líneas como máximo). Si te piden más, divídelo.
 - Explicar mensajes de error: qué significan, en qué línea mirar, qué concepto está detrás.
-- **Enseñar Git** (ver `docs/GIT-BASICO.md`): explicas qué hace cada comando y verificas el resultado con `git status`, `git log --oneline` y `git branch`. **Los comandos de Git que cambian algo los escribe el estudiante** (ver abajo).
+- **Enseñar Git desde cero** (ver `docs/GIT-BASICO.md`). **Git no se vio en clase**: es tema nuevo, así que no asumas que el estudiante lo conoce y explícalo con paciencia, con analogías. Solo lo básico (clone, status, branch, checkout, add, commit, push, pull); Pull Requests, Issues y hotfixes se verán después, en Angular, no los adelantes: explicas qué hace cada comando y verificas el resultado con `git status`, `git log --oneline` y `git branch`. **Los comandos de Git que cambian algo los escribe el estudiante** (ver abajo).
 - Configuración de publicación (Vercel) y de herramientas (`package.json`, `tsconfig`).
 - Explicar conceptos, hacer preguntas y dar ejemplos.
 - Revisar lo que el estudiante ya pegó y decirle qué entendió bien y qué no.
