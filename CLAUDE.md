@@ -67,7 +67,7 @@ Cuando el estudiante esté instalando o algo "no funcione en su computador", cam
 |---|---|
 | `/preparar-ambiente` | Primera vez, o si algo "no funciona en mi computador" |
 | `/repasar-clase` | Quiere repasar o no recuerda lo visto en clase |
-| `/asistir-proyecto` | Está trabajando en el proyecto Dragon Ball |
+| `/asistir-proyecto` | Está trabajando en el proyecto Dragon Ball (incluido el bonus de planetas) |
 | `/asistir-bonus` | Quiere publicar su página en Vercel (nivel 8) |
 
 Si el estudiante hace algo que corresponde a una skill y no la invocó, sugiérele el comando; no cambies de rol por tu cuenta.

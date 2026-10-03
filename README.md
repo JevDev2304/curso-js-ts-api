@@ -13,7 +13,7 @@ Este repositorio trae **todo lo necesario** para repasar lo visto en clase y hac
 1. **Repasar** lo que ya viste en clase (HTML/CSS, JavaScript, `async/await`, `fetch`, TypeScript y la Pokédex).
 2. **Aprender Git básico** (tema nuevo, no visto en clase): ramas, commits y subir tu trabajo a GitHub.
 3. **Hacer el proyecto Dragon Ball**: explorar una API nueva, diseñar la página, construirla por niveles (una rama de Git por nivel) y analizar tu propio código.
-4. **(Bonus)** Publicar tu página en internet con Vercel.
+4. **(Bonus)** Publicar tu página en internet con Vercel (+10 %) y trabajar también con los **planetas** de Dragon Ball: diseño, código y despliegue (+15 %).
 
 ## Qué hay en cada carpeta
 
@@ -108,18 +108,7 @@ Entra a <http://localhost:5500>. Verás el menú con todo el curso. Para detener
 | 6 | Aprender Git básico (ramas, commit, push). **Tema nuevo, no visto en clase**; se retoma en Angular | [video intro de 2:30](https://www.youtube.com/watch?v=DinilgacaWs) → [`docs/GIT-BASICO.md`](docs/GIT-BASICO.md) → [curso completo](https://www.youtube.com/watch?v=T3roQrB_Jko&list=PLJ7sTTLrIA6klMtrvcpGXYkBFoUP3rqwo) (opcional) | 45 min |
 | 7 | Leer el enunciado y mirar el wireframe | `04-proyecto/proyecto-estudiante.html` | 20 min |
 | 8 | Hacer el proyecto (partes A a D), **una rama de Git por nivel** | `04-proyecto/dragonball/` | varios días |
-| 9 | *(Bonus)* Publicar en Vercel (mira antes el [ejemplo resuelto](https://github.com/JevDev2304/curso-js-ts-api/tree/deploy-vercel-pokeapi-nivel-8)) | [nivel 8 del enunciado](04-proyecto/proyecto-estudiante.html) | 30 min |
-
----|---|---|---|
-| 1 | Verificar tu ambiente | `npm run verificar` | 10 min |
-| 1b | Leer el repaso rápido de toda la teoría | [`00-repaso-rapido/repaso-rapido.html`](00-repaso-rapido/repaso-rapido.html) | 20 min |
-| 2 | Repasar HTML y CSS y explorar el laboratorio de CSS | `01-clase-html-css/` | 45 min |
-| 3 | Repasar JS, `async/await` y TypeScript | `02-clase-js-ts/` (ejecuta y modifica los ejemplos) | 1 h |
-| 4 | Recorrer la Pokédex paso a paso | `03-pokedex-pasos/index.html` | 1 h |
-| 5 | Aprender Git básico (ramas, commit, push). **Tema nuevo, no visto en clase**; se retoma en Angular | [video intro de 2:30](https://www.youtube.com/watch?v=DinilgacaWs) → [`docs/GIT-BASICO.md`](docs/GIT-BASICO.md) → [curso completo](https://www.youtube.com/watch?v=T3roQrB_Jko&list=PLJ7sTTLrIA6klMtrvcpGXYkBFoUP3rqwo) (opcional) | 45 min |
-| 6 | Leer el enunciado y mirar el wireframe | `04-proyecto/proyecto-estudiante.html` | 20 min |
-| 7 | Hacer el proyecto (partes A a D), **una rama de Git por nivel** | `04-proyecto/dragonball/` | varios días |
-| 8 | *(Bonus)* Publicar en Vercel (mira antes el [ejemplo resuelto](https://github.com/JevDev2304/curso-js-ts-api/tree/deploy-vercel-pokeapi-nivel-8)) | [nivel 8 del enunciado](04-proyecto/proyecto-estudiante.html) | 30 min |
+| 9 | *(Bonus)* Planetas ★ (diseño, código y despliegue) y publicar en Vercel (mira antes el [ejemplo resuelto](https://github.com/JevDev2304/curso-js-ts-api/tree/deploy-vercel-pokeapi-nivel-8)) | [nivel 8 del enunciado](04-proyecto/proyecto-estudiante.html) | 30 min |
 
 ---
 
@@ -144,9 +133,9 @@ Hoy nadie teclea todo desde cero, así que **no tienes que escribir el código a
 
 Tu repositorio de GitHub, **que debe ser público**, con:
 
-- La carpeta `04-proyecto/dragonball/` con tus niveles (`nivel1` … `nivel7`), **subidos a GitHub en una rama por nivel** (`nivel-1` … `nivel-7`, y `nivel-8` si haces el bonus de Vercel).
+- La carpeta `04-proyecto/dragonball/` con tus niveles (`nivel1` … `nivel7`), **subidos a GitHub en una rama por nivel** (`nivel-1` … `nivel-7`; y `bonus-planetas` y `nivel-8` si haces los bonus).
 - `04-proyecto/dragonball/README.md` completo (hay una plantilla): tus respuestas, tu diseño, tus decisiones, la bitácora de errores, la bitácora de conversación con la IA y la sección «Mis comandos de Git» con tus palabras.
-- *(Bonus)* La URL de tu página publicada en Vercel.
+- *(Bonus)* La URL de tu página publicada en Vercel y, si hiciste el bonus de planetas, su diseño y su código (rama `bonus-planetas`).
 
 Los detalles y la rúbrica están en [`04-proyecto/proyecto-estudiante.html`](04-proyecto/proyecto-estudiante.html).
 
