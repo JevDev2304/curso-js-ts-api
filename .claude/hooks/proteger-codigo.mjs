@@ -17,7 +17,7 @@ const norm = (p = "") => String(p).replace(/\\/g, "/");
 const CODIGO_ESTUDIANTE = /04-proyecto\/dragonball\/.*\.(ts|html|css|js|map)$/i;
 const README_ESTUDIANTE = /04-proyecto\/dragonball\/README\.md$/i;
 const CONFIG_TUTOR = /(^|\/)(\.claude\/|CLAUDE\.md$)/;
-const MATERIAL_CLASE = /(^|\/)(01-clase-html-css|02-clase-js-ts|03-pokedex-pasos)\//;
+const MATERIAL_CLASE = /(^|\/)(00-repaso-rapido|01-clase-html-css|02-clase-js-ts|03-pokedex-pasos)\//;
 const ENUNCIADO = /04-proyecto\/(proyecto-estudiante|wireframe-dragonball)\.html$/;
 
 const MSG_CODIGO =
@@ -80,7 +80,7 @@ if (herramienta === "Bash") {
       if (CONFIG_TUTOR.test(cmd) || /(^|[\s"'/])\.claude(\/|\b)/.test(cmd) || /CLAUDE\.md/.test(cmd)) bloquear(MSG_TUTOR);
       if (/04-proyecto\/dragonball\/README\.md|dragonball\/README\.md/.test(cmd)) bloquear(MSG_README);
       if (/dragonball\/[^\s"']*\.(ts|html|css|js|map)\b|dragonball\/nivel\d+/i.test(cmd)) bloquear(MSG_CODIGO);
-      if (/(01-clase-html-css|02-clase-js-ts|03-pokedex-pasos)\//.test(cmd)) bloquear(MSG_CLASE);
+      if (/(00-repaso-rapido|01-clase-html-css|02-clase-js-ts|03-pokedex-pasos)\//.test(cmd)) bloquear(MSG_CLASE);
     }
   }
 }
