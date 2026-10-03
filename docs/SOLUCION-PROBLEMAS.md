@@ -52,6 +52,8 @@ Busca tu síntoma en la tabla. Si no aparece, copia **el mensaje de error comple
 
 ## Vercel (bonus)
 
+> Si dudas de tu configuración, compárala con el [ejemplo resuelto](https://github.com/JevDev2304/curso-js-ts-api/tree/deploy-vercel-pokeapi-nivel-8) (rama `deploy-vercel-pokeapi-nivel-8`, archivo `DEPLOY-VERCEL.md`).
+
 | Síntoma | Causa probable | Qué hacer |
 |---|---|---|
 | `No Output Directory named "public" found after the Build completed` | Vercel compiló, pero no encontró la carpeta que debe publicar. Casi siempre porque `nivel7` no está en la rama `main` de tu GitHub, o cambiaste los ajustes por defecto | Revisa en GitHub que `main` tiene `04-proyecto/dragonball/nivel7/`. Si no: `git checkout main`, `git merge nivel-7`, `git push`. En Vercel → Settings → General deja Root Directory, Build Command y Output Directory **sin cambios** (el `vercel.json` del repo los define) |

@@ -90,7 +90,7 @@ Entra a <http://localhost:5500>. Verás el menú con todo el curso. Para detener
 | 5 | Aprender Git básico (ramas, commit, push) | [video intro de 2:30](https://www.youtube.com/watch?v=DinilgacaWs) → [`docs/GIT-BASICO.md`](docs/GIT-BASICO.md) → [curso completo](https://www.youtube.com/watch?v=T3roQrB_Jko&list=PLJ7sTTLrIA6klMtrvcpGXYkBFoUP3rqwo) (opcional) | 45 min |
 | 6 | Leer el enunciado y mirar el wireframe | `04-proyecto/proyecto-estudiante.html` | 20 min |
 | 7 | Hacer el proyecto (partes A a D), **una rama de Git por nivel** | `04-proyecto/dragonball/` | varios días |
-| 8 | *(Bonus)* Publicar en Vercel | [nivel 8 del enunciado](04-proyecto/proyecto-estudiante.html) | 30 min |
+| 8 | *(Bonus)* Publicar en Vercel (mira antes el [ejemplo resuelto](https://github.com/JevDev2304/curso-js-ts-api/tree/deploy-vercel-pokeapi-nivel-8)) | [nivel 8 del enunciado](04-proyecto/proyecto-estudiante.html) | 30 min |
 
 ---
 

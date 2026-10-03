@@ -17,6 +17,10 @@ Comprueba (solo lectura) que:
 
 Si algo falla, devuélvelo a `/asistir-proyecto`.
 
+## Ejemplo resuelto de referencia
+
+En el repositorio del curso existe la rama `deploy-vercel-pokeapi-nivel-8` (https://github.com/JevDev2304/curso-js-ts-api/tree/deploy-vercel-pokeapi-nivel-8) que despliega la Pokédex. Su `DEPLOY-VERCEL.md` explica el `vercel.json` y traduce el ejemplo al proyecto del estudiante. Pídele que **lo lea primero** y que te explique qué hace cada campo antes de empezar su despliegue. Esa rama no se modifica y el estudiante no la despliega: su despliegue va en su propio repositorio, rama `main`.
+
 ## Pregunta de entrada (concepto)
 
 Antes de tocar nada, pregúntale y escucha:
