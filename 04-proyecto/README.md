@@ -24,7 +24,7 @@ y entra a <http://localhost:5500/04-proyecto/proyecto-estudiante.html>. También
 2. **Parte B · Diseña**: con el wireframe y la paleta, genera el diseño completo (web y móvil) en [Claude Design](https://claude.ai/design) o [Google Stitch](https://stitch.withgoogle.com). Guarda tu prompt y una iteración.
 3. **Parte C · Construye** los niveles 1 a 7 dentro de `dragonball/`, **una rama de Git por nivel**.
 4. **Parte D · Analiza tu código**: 8 preguntas abiertas (un párrafo mínimo, con tus palabras) y 4 de selección múltiple.
-5. **Bonus ★ (opcionales):** **Nivel 8**, publicar en Vercel (+10), y **Planetas**, diseño + código + despliegue de una pestaña de planetas (+5). El wireframe de los planetas está en `wireframe-dragonball.html`.
+5. **Bonus ★ (opcionales):** **Nivel 8**, publicar en Vercel (+10), y **Planetas**, diseño + código + despliegue de una pestaña de planetas (+15). El wireframe de los planetas está en `wireframe-dragonball.html`.
 
 ## Cómo crear cada nivel
 
