@@ -27,16 +27,26 @@ Este repositorio trae **todo lo necesario** para repasar lo visto en clase y hac
 
 ## Empieza en 10 minutos
 
-### Lo que necesitas instalado
+### Opción A (recomendada): deja que Claude Code te guíe
+
+Ya tienes Claude Code, así que no hace falta que descifres una guía de instalación. Abre una terminal, escribe `claude` y pega el prompt de arranque. Tu Claude te guía **paso a paso**: revisa qué tienes instalado, te ayuda con lo que falte, crea tu repositorio contigo, instala las dependencias y verifica que todo funciona, explicándote cada cosa.
+
+👉 El prompt está en [`docs/INSTALACION.md`](docs/INSTALACION.md#camino-a-recomendado-claude-code-te-guía).
+
+Después, dentro de la carpeta del repositorio, usa `claude` con estos comandos: `/preparar-ambiente` (si algo falla), `/repasar-clase`, `/asistir-proyecto` y `/asistir-bonus`.
+
+### Opción B: manual
+
+**Necesitas instalado:**
 
 - **Node.js** (versión 20 o superior) → <https://nodejs.org> (descarga la LTS)
 - **Git** → <https://git-scm.com/downloads>
 - **Visual Studio Code** → <https://code.visualstudio.com>
 - Una cuenta de **GitHub** → <https://github.com> (gratis)
 
-Si no sabes cómo instalarlos o es tu primera vez con la terminal, sigue la [**guía de instalación paso a paso**](docs/INSTALACION.md) (Windows, Mac y Linux).
+Guía completa para Windows, Mac y Linux: [`docs/INSTALACION.md`](docs/INSTALACION.md#camino-b-guía-manual).
 
-### Paso a paso
+### Paso a paso (opción B)
 
 **1. Consigue tu copia del repositorio.** La forma más fácil: en la página del repositorio (<https://github.com/JevDev2304/curso-js-ts-api>) pulsa **Use this template → Create a new repository**, ponle un nombre y créalo. Así tienes tu propio repositorio. Luego cópialo a tu computador (reemplaza la dirección por la tuya):
 

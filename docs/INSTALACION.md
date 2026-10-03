@@ -1,4 +1,44 @@
-# Guía de instalación paso a paso
+# Guía de instalación
+
+Hay dos caminos. **Como ya tienes Claude Code instalado, el camino A es el recomendado**: tu propio Claude te guía paso a paso, te explica cada cosa y resuelve los errores contigo, sin que tengas que descifrar una guía larga. El camino B es la guía manual de siempre, por si prefieres hacerlo tú o Claude Code no está disponible.
+
+## Camino A (recomendado): Claude Code te guía
+
+**Lo único que haces tú:** abrir una terminal, escribir `claude` y pegar el prompt de abajo. El resto lo hace Claude contigo.
+
+1. Abre una terminal (Windows: busca **PowerShell**; Mac: **Terminal**; Linux: `Ctrl+Alt+T`).
+2. Escribe `claude` y pulsa Enter. Puedes hacerlo desde cualquier carpeta; todavía no hace falta tener el repositorio.
+3. Pega este prompt completo y pulsa Enter:
+
+```text
+Actúa como mi guía de instalación y tutor para un curso de JavaScript y TypeScript. Voy a trabajar con este repositorio plantilla: https://github.com/JevDev2304/curso-js-ts-api
+
+Cómo quiero que me ayudes:
+- Guíame PASO A PASO, un paso por vez, y en 1 o 2 frases explícame qué hace cada cosa y para qué sirve, sin tecnicismos.
+- Ejecuta tú los comandos de instalación y verificación. Pídeme confirmación solo antes de instalar programas o de cambiar mi configuración global de Git.
+- Si algo falla, explícame el error con palabras simples, resuélvelo y sigue. No me frenes por detalles menores ni me hagas preguntas innecesarias.
+- No me des listas largas: dime el siguiente paso, espera a que lo hagamos y continúa.
+
+Los pasos que quiero hacer:
+1. Descubre mi sistema operativo y comprueba si tengo Node.js (versión 20 o superior), npm, Git y VS Code. Ayúdame a instalar lo que falte.
+2. Pregúntame mi nombre y mi correo de GitHub y configura Git con ellos.
+3. Explícame cómo crear MI repositorio desde la plantilla (botón "Use this template", en el navegador, dejándolo Público). Pregúntame mi usuario de GitHub y el nombre que le puse, y clónalo en mi carpeta Documentos.
+4. Entra a la carpeta del repositorio, ejecuta npm install y luego npm run verificar, y explícame el resultado.
+5. Al terminar, dime que cierre esta sesión, abra Claude Code dentro de la carpeta del repositorio y escriba /repasar-clase.
+
+Empieza preguntándome qué sistema operativo uso.
+```
+
+4. **Sigue la conversación.** Claude te va diciendo el siguiente paso, lo ejecuta y te explica qué hizo. Cuando te pida ejecutar algo en el navegador (por ejemplo crear tu repositorio con *Use this template*), hazlo y cuéntale cómo te fue.
+5. Claude Code te pedirá **permiso** para ejecutar algunos comandos. Son los comandos de instalación y verificación del curso: puedes aceptarlos. Si no entiendes un comando, pregúntale qué hace antes de aceptar.
+
+Al terminar, tu ambiente queda verificado y ya estás dentro del repositorio con el tutor del curso configurado.
+
+> **Si más adelante algo deja de funcionar,** abre `claude` dentro de la carpeta del repositorio y escribe `/preparar-ambiente`. Te guía igual, paso a paso, y arregla lo que falte.
+
+---
+
+## Camino B: guía manual
 
 Esta guía asume que **nunca** has configurado un ambiente de programación. Si ya tienes Node.js, Git y VS Code, salta a [Paso 5](#paso-5-trae-el-repositorio-y-verifica).
 
@@ -172,7 +212,7 @@ Abre <http://localhost:5500> en tu navegador. Para detener el servidor, `Ctrl + 
 
 ---
 
-## Paso 6 (opcional): instala Claude Code
+## Paso 6 (opcional): Claude Code
 
 Solo si quieres usar el tutor configurado en este repositorio. Necesitas un plan de pago de Claude (Pro o superior). Mira [`USAR-IA.md`](USAR-IA.md). **No es necesario para hacer el curso.**
 

@@ -56,6 +56,10 @@ Empieza leyendo `README.md` y `04-proyecto/proyecto-estudiante.html` si necesita
 
 Si dice "dame todo el nivel", respóndele en una frase por qué vas por piezas (no podrá explicar lo que no acomodó ni probó) y entrégale la primera pieza.
 
+## Instalación y problemas de ambiente: guía práctica, sin trabas
+
+Cuando el estudiante esté instalando o algo "no funcione en su computador", cambia de modo: eres un **guía paso a paso** que **explica brevemente y hace tú lo mecánico**. Un paso por vez, sin listas largas, sin exámenes y sin frenarlo por detalles menores. Haz sin pedir permiso lo seguro (comprobar versiones, `npm install`, `npm run verificar`, compilar, servir); pregunta solo antes de instalar programas, cambiar la configuración global de Git o cuando necesites un dato suyo. Si algo falla, explica el error en palabras simples, arréglalo y sigue. La skill `/preparar-ambiente` detalla el flujo.
+
 ## Skills disponibles (las invoca el estudiante)
 
 | Comando | Cuándo proponérselo |
