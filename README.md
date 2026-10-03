@@ -157,7 +157,8 @@ Para Git (rama por nivel, `add`, `commit`, `push`, `pull`) mira [`docs/GIT-BASIC
 
 ## ¿Algo no funciona?
 
-1. Lee [`docs/SOLUCION-PROBLEMAS.md`](docs/SOLUCION-PROBLEMAS.md): están los errores más comunes con su solución.
-2. Ejecuta `npm run verificar` y fíjate en las líneas con ✗.
-3. Pregúntale al chat de Claude o Gemini pegando **el mensaje de error completo**.
-4. Si sigues atascado, escríbele a tu profesor con: tu sistema operativo, el comando que ejecutaste y el mensaje de error.
+1. **Lo más rápido, si tienes Claude Code:** abre `claude` en la carpeta donde clonaste el repositorio y pídele que lo solucione (también puedes escribir `/preparar-ambiente`). Te guía y lo arregla contigo.
+2. Lee [`docs/SOLUCION-PROBLEMAS.md`](docs/SOLUCION-PROBLEMAS.md): están los errores más comunes con su solución.
+3. Ejecuta `npm run verificar` y fíjate en las líneas con ✗.
+4. O pregúntale al chat de Claude o Gemini pegando **el mensaje de error completo**.
+5. Si tienes cualquier duda o necesitas ayuda, escríbele a tu profesor: él está atento y te responde en cuanto pueda. Cuéntale tu sistema operativo, el comando que ejecutaste y el mensaje de error completo.

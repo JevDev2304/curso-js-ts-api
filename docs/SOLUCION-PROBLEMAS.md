@@ -1,6 +1,6 @@
 # Solución de problemas
 
-Busca tu síntoma en la tabla. Si no aparece, copia **el mensaje de error completo** y pídele ayuda al chat de Claude o Gemini (mira [`PROMPTS-CHAT.md`](PROMPTS-CHAT.md)) o a tu profesor.
+**Lo más rápido, si tienes Claude Code:** abre `claude` en la carpeta del repositorio y pídele que solucione el problema (o escribe `/preparar-ambiente`). Si no, busca tu síntoma en las tablas. Si no aparece, copia **el mensaje de error completo** y pídele ayuda al chat de Claude o Gemini (mira [`PROMPTS-CHAT.md`](PROMPTS-CHAT.md)) o a tu profesor.
 
 ## Instalación y terminal
 
@@ -88,7 +88,7 @@ Busca tu síntoma en la tabla. Si no aparece, copia **el mensaje de error comple
 
 ## Cuando nada de lo anterior sirve
 
-Envíale a tu profesor, en un solo mensaje:
+Tu profesor está atento: escríbele cuando tengas cualquier duda o necesites ayuda, y te responde en cuanto pueda. Para ayudarte más rápido, cuéntale en un solo mensaje:
 
 1. Tu sistema operativo (Windows 11, macOS 14, Ubuntu…).
 2. La salida completa de `npm run verificar`.
