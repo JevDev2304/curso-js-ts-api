@@ -4,8 +4,9 @@
 > Tu trabajo se hace en **tu propio repositorio**, y la rama que **tú** despliegas es **`nivel-8`**, no esta. Lee esta rama, entiéndela y haz lo equivalente con tu proyecto.
 
 - 🌐 **Página publicada de este ejemplo:** mira el campo *Website* en la parte superior derecha de este repositorio en GitHub.
-- 🔍 **Qué cambia respecto a `main`** (solo 2 archivos): [ver la comparación](https://github.com/JevDev2304/curso-js-ts-api/compare/main...deploy-vercel-pokeapi-nivel-8)
+- 🔍 **Qué cambia respecto a `main`** (solo 3 archivos): [ver la comparación](https://github.com/JevDev2304/curso-js-ts-api/compare/main...deploy-vercel-pokeapi-nivel-8)
   - `vercel.json` (la configuración del despliegue)
+  - `vercel.comentado.jsonc` (la misma configuración, con comentarios)
   - `DEPLOY-VERCEL.md` (este archivo)
 
 ---
@@ -26,12 +27,23 @@ Esas tres respuestas están en el archivo [`vercel.json`](vercel.json).
 
 ## 2. El archivo `vercel.json`, línea por línea
 
-```json
+> ℹ️ `vercel.json` **no puede llevar comentarios** (Vercel lo lee como JSON y los comentarios no son JSON válido). Por eso la versión explicada está en [`vercel.comentado.jsonc`](vercel.comentado.jsonc): léela con calma, es la misma configuración con un comentario en cada línea.
+
+```jsonc
 {
+  // Ayuda al editor a autocompletar y avisar errores. No afecta el despliegue.
   "$schema": "https://openapi.vercel.sh/vercel.json",
+
+  // Ningún framework: es HTML + CSS + TypeScript a secas.
   "framework": null,
+
+  // 1) ¿QUÉ INSTALO? Las dependencias del proyecto (TypeScript).
   "installCommand": "npm install",
+
+  // 2) ¿QUÉ EJECUTO PARA CONSTRUIR? Compila los .ts a .js (el navegador no entiende TypeScript).
   "buildCommand": "npm run build:pokedex",
+
+  // 3) ¿QUÉ CARPETA PUBLICO? Solo esta carpeta llega a internet; debe existir después de construir.
   "outputDirectory": "03-pokedex-pasos/paso7"
 }
 ```

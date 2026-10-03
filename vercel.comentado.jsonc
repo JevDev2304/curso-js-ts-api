@@ -4,6 +4,9 @@
 //    no son JSON válido, así que podrían romper el despliegue. Este archivo es una copia explicada.
 //    Si cambias algo en vercel.json, actualiza también esta copia.
 //
+// ESTE ES EL EJEMPLO: publica la Pokédex (paso 7). En tu proyecto cambian el comando de build
+// (npm run build) y la carpeta publicada (04-proyecto/dragonball/nivel7).
+//
 // Vercel necesita contestar 3 preguntas para publicar tu página:
 //   1) ¿Qué instalo?   2) ¿Qué ejecuto para construirla?   3) ¿Qué carpeta publico?
 {
@@ -21,13 +24,13 @@
   "installCommand": "npm install",
 
   // PREGUNTA 2 · ¿QUÉ EJECUTO PARA CONSTRUIR LA PÁGINA?
-  // Es un script del package.json de la raíz del repositorio: compila los main.ts de TUS niveles (04-proyecto/dragonball/nivelN) a main.js.
+  // Es un script del package.json de la raíz del repositorio: compila los main.ts de la Pokédex (03-pokedex-pasos/pasoN) a main.js.
   // Los navegadores no entienden TypeScript: este paso convierte cada main.ts en el main.js que sí cargan.
-  "buildCommand": "npm run build",
+  "buildCommand": "npm run build:pokedex",
 
   // PREGUNTA 3 · ¿QUÉ CARPETA PUBLICO?
   // Vercel sube SOLO esta carpeta a internet (su index.html es la página que ve el visitante).
   // Debe existir DESPUÉS de construir. Si no existe, Vercel falla con:
   //   «No Output Directory named "public" found after the Build completed»
-  "outputDirectory": "04-proyecto/dragonball/nivel7"
+  "outputDirectory": "03-pokedex-pasos/paso7"
 }
