@@ -59,7 +59,7 @@ Explica cada comando **con tus palabras**: qué hace y cuándo lo usaste en este
 | `git pull` | _…_ | _…_ |
 
 **Mi repositorio de GitHub (público):** _enlace_
-**Mis ramas:** _`nivel-1` … `nivel-7` y, si hice el bonus, `nivel-8`_
+**Mis ramas:** _`nivel-1` … `nivel-7` y, si hice los bonus, `bonus-planetas` y `nivel-8`_
 
 ## Bitácora de conversación con la IA
 
@@ -68,6 +68,12 @@ Al menos **3 momentos** en que cuestioné o corregí a la IA. Cuéntalo con tus 
 | Qué le pedí | Qué hizo mal o qué no entendí | Cómo lo corregí o qué aprendí |
 |---|---|---|
 | _…_ | _…_ | _…_ |
+
+## ★ Bonus planetas (si lo hice)
+
+- **Prompt e iteración del diseño de planetas:** _…_
+- **Capturas:** planetas web y móvil (listado y detalle).
+- **¿Qué reutilicé de los personajes y qué tuve que cambiar?** _…_
 
 ## D · Análisis de mi código
 
