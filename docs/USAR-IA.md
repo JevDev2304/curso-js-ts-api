@@ -93,7 +93,7 @@ claude --version
 1. Entra a la carpeta del repositorio: `cd NOMBRE-DE-TU-REPO`
 2. Inicia Claude Code: `claude` (la primera vez abre el navegador para iniciar sesión).
 3. Claude Code lee `CLAUDE.md`, que le asigna el rol de **tutor**.
-4. Escribe tu primer comando:
+4. Si es tu primera vez, el camino más simple es el **prompt de arranque** de [`INSTALACION.md`](INSTALACION.md#camino-a-recomendado-claude-code-te-guía): Claude te guía paso a paso, explicando, para instalar, crear tu repositorio y verificar todo. Si ya estás en el repositorio y algo falla, escribe:
 
 ```
 /preparar-ambiente
@@ -103,7 +103,7 @@ claude --version
 
 | Comando | Cuándo usarlo | Qué hace por ti | Qué NO hace |
 |---|---|---|---|
-| `/preparar-ambiente` | La primera vez, o si algo no funciona en tu computador | Verifica e instala lo que falte (Node, dependencias, Git), configura tu identidad de Git y abre el servidor local. Te explica para qué sirve cada herramienta | No toca tu código |
+| `/preparar-ambiente` | La primera vez, o si algo no funciona en tu computador | Te guía paso a paso y explicando: verifica e instala lo que falte (Node, dependencias, Git), configura tu identidad de Git y abre el servidor local. Resuelve los errores contigo sin frenarte | No toca tu código |
 | `/repasar-clase` | Quieres repasar lo visto en clase | Te hace preguntas, te pone mini quiz y te manda a comprobar en los ejemplos. Te dice qué dominas y qué repasar | No hace tu proyecto |
 | `/asistir-proyecto` | Estás trabajando en el proyecto Dragon Ball | Te entrega el código **por piezas pequeñas** en el chat, con archivo, lugar y por qué; crea la estructura de cada nivel, compila, te explica los errores, te dice qué comando de Git escribir y por qué (**los escribes tú**) y te pide explicar cada pieza antes de seguir | No escribe tus archivos, ni tus respuestas de análisis, ni tu README |
 | `/asistir-bonus` | Quieres publicar en Vercel (nivel 8) | Guía el uso de Git y GitHub y de la configuración de Vercel, y diagnostica errores de despliegue | No maneja tus contraseñas; tú inicias sesión |

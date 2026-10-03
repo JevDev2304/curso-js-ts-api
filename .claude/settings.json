@@ -10,7 +10,12 @@
       "Bash(git log*)",
       "Bash(git diff*)",
       "Bash(npm run verificar*)",
-      "Bash(npm run build*)"
+      "Bash(npm run build*)",
+      "Bash(npm install*)",
+      "Bash(npm run servir*)",
+      "Bash(git config*)",
+      "Bash(pwd)",
+      "Bash(ls*)"
     ],
     "deny": [
       "Edit(**/04-proyecto/dragonball/**/*.ts)",
