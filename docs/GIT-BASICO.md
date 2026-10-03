@@ -136,7 +136,7 @@ git checkout -b nivel-8          # crea la rama del bonus y te mueve a ella
 git push -u origin nivel-8       # súbela a GitHub
 ```
 
-En Vercel eliges esa rama como **Production Branch** (el enunciado y `DEPLOY-VERCEL.md` explican cómo). Cada `git push` que hagas desde `nivel-8` vuelve a publicar tu página.
+En Vercel le indicas esa rama en **Settings → Environments → Production → Branch Tracking** (el enunciado y `DEPLOY-VERCEL.md` explican cómo). Cada `git push` que hagas desde `nivel-8` vuelve a publicar tu página.
 
 ---
 
