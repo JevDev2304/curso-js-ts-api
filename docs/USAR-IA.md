@@ -42,12 +42,12 @@ Y todo lo sustentas en vivo.
 | | Chat de Claude o Gemini | Claude Code (tutor del repositorio) |
 |---|---|---|
 | Qué es | La página web o app de siempre | Un programa en tu terminal que lee tu repositorio |
-| Se recomienda para | **Todo el mundo.** Es lo más simple | Quien ya está cómodo con la terminal |
+| Se recomienda para | **Escribir el proyecto.** Es lo más simple | **Instalar y preparar el ambiente** (guía paso a paso), y el proyecto si ya te sientes cómodo con la terminal |
 | Cómo te da el código | En bloques en la conversación; tú lo acomodas | También en bloques en la conversación; **no escribe tus archivos** |
 | Costo | Gratis o tu plan | Requiere plan de pago de Claude |
 | Dónde se configura | [`PROMPTS-CHAT.md`](PROMPTS-CHAT.md) | Este documento |
 
-> **Recomendación:** empieza con el **chat**. Con agentes que escriben los archivos por ti (Claude Code u OpenCode sin límites) no acomodas nada y se aprende menos. Si usas Claude Code, este repositorio ya lo configura para que te entregue el código en la conversación.
+> **Recomendación:** para **instalar**, deja que Claude Code te guíe (ver [`INSTALACION.md`](INSTALACION.md#camino-a-recomendado-claude-code-te-guía)). Para **escribir el proyecto**, empieza con el **chat**: con agentes que escriben los archivos por ti (Claude Code u OpenCode sin límites) no acomodas nada y se aprende menos. Si usas Claude Code para el proyecto, este repositorio ya lo configura para que te entregue el código en la conversación y no escriba tus archivos.
 
 ---
 
@@ -68,7 +68,7 @@ Y todo lo sustentas en vivo.
 
 ### Instalación
 
-Abre una terminal y ejecuta el comando de tu sistema ([documentación oficial](https://code.claude.com/docs/en/setup)):
+Si ya tienes `claude --version`, salta a [Primer uso](#primer-uso). Si no, abre una terminal y ejecuta el comando de tu sistema ([documentación oficial](https://code.claude.com/docs/en/setup)):
 
 **Mac, Linux o WSL**
 
@@ -90,31 +90,32 @@ claude --version
 
 ### Primer uso
 
-1. Entra a la carpeta del repositorio: `cd NOMBRE-DE-TU-REPO`
+**Si todavía no tienes el repositorio en tu computador:** usa el **prompt de arranque** de [`INSTALACION.md`](INSTALACION.md#camino-a-recomendado-claude-code-te-guía). Claude te guía paso a paso, explicando, para instalar, crear tu repositorio y verificar todo, y al final te dice cuándo abrir Claude Code dentro de él.
+
+**Si ya tienes el repositorio:**
+
+1. Entra a la carpeta: `cd NOMBRE-DE-TU-REPO`
 2. Inicia Claude Code: `claude` (la primera vez abre el navegador para iniciar sesión).
 3. Claude Code lee `CLAUDE.md`, que le asigna el rol de **tutor**.
-4. Si es tu primera vez, el camino más simple es el **prompt de arranque** de [`INSTALACION.md`](INSTALACION.md#camino-a-recomendado-claude-code-te-guía): Claude te guía paso a paso, explicando, para instalar, crear tu repositorio y verificar todo. Si ya estás en el repositorio y algo falla, escribe:
+4. Si algo de tu ambiente falla, escribe `/preparar-ambiente`. Si quieres repasar, `/repasar-clase`. Si trabajas en el proyecto, `/asistir-proyecto`.
 
-```
-/preparar-ambiente
-```
+**Permisos:** Claude Code te va a pedir permiso para ejecutar algunos comandos. Los del curso (`npm install`, `npm run verificar`, `npm run build`…) puedes aceptarlos; si no entiendes uno, pregúntale qué hace antes.
 
 ### Los cuatro comandos (skills)
 
 | Comando | Cuándo usarlo | Qué hace por ti | Qué NO hace |
 |---|---|---|---|
 | `/preparar-ambiente` | La primera vez, o si algo no funciona en tu computador | Te guía paso a paso y explicando: verifica e instala lo que falte (Node, dependencias, Git), configura tu identidad de Git y abre el servidor local. Resuelve los errores contigo sin frenarte | No toca tu código |
-| `/repasar-clase` | Quieres repasar lo visto en clase | Te hace preguntas, te pone mini quiz y te manda a comprobar en los ejemplos. Te dice qué dominas y qué repasar | No hace tu proyecto |
+| `/repasar-clase` | Quieres repasar lo visto en clase (HTML/CSS, JS, `async/await`, TypeScript, Pokédex) | Te hace preguntas, te pone mini quiz y te manda a comprobar en los ejemplos. Te dice qué dominas y qué repasar. **Git y Vercel no se vieron en clase**: los trata como temas nuevos, no como repaso | No hace tu proyecto |
 | `/asistir-proyecto` | Estás trabajando en el proyecto Dragon Ball | Te entrega el código **por piezas pequeñas** en el chat, con archivo, lugar y por qué; crea la estructura de cada nivel, compila, te explica los errores, te dice qué comando de Git escribir y por qué (**los escribes tú**) y te pide explicar cada pieza antes de seguir | No escribe tus archivos, ni tus respuestas de análisis, ni tu README |
-| `/asistir-bonus` | Quieres publicar en Vercel (nivel 8) | Guía el uso de Git y GitHub y de la configuración de Vercel, y diagnostica errores de despliegue | No maneja tus contraseñas; tú inicias sesión |
+| `/asistir-bonus` | Quieres publicar en Vercel (nivel 8) | Te dice qué comandos de Git escribir para la rama `nivel-8` (los escribes tú) y te guía en Vercel: rama de producción, despliegue y que la página sea pública. Diagnostica errores de despliegue | No maneja tus contraseñas; tú inicias sesión |
 
 ### Qué está limitado y por qué
 
 Este repositorio incluye un **guardarraíl** (`.claude/`) que impide que Claude Code:
 
 - cree o modifique los archivos de `04-proyecto/dragonball/` (HTML, CSS, TypeScript, JavaScript) ni tu `README.md`,
-- modifique los materiales de clase, el tutor (`CLAUDE.md`) o su propia configuración.
-
+- modifique los materiales de clase, el tutor (`CLAUDE.md`) o su propia configuración,
 - ejecute comandos de Git que cambian algo (`add`, `commit`, `push`, `checkout`, `merge`…). **Esos los escribes tú**, para aprender qué hace cada uno.
 
 Sí puede leer todo, ejecutar los comandos del curso (`npm run verificar`, `npm run build`, `npm run nivel`), consultar Git sin cambiar nada (`git status`, `git log`, `git branch`) y modificar archivos de configuración (como `package.json` o `.gitignore`).
@@ -137,5 +138,5 @@ Ejecuta `claude doctor` y mira [`SOLUCION-PROBLEMAS.md`](SOLUCION-PROBLEMAS.md).
 4. **Tus respuestas de análisis (Parte D) y tu README** son un párrafo como mínimo, en tus palabras, sin pegar texto de una IA.
 5. Guardas 3 momentos en que **cuestionaste o corregiste** a la IA (bitácora de conversación).
 6. Para el diseño puedes usar **Claude Design** o Google Stitch.
-7. Los **comandos de Git los escribes tú** (guía en [`GIT-BASICO.md`](GIT-BASICO.md)).
+7. Los **comandos de Git los escribes tú** (guía en [`GIT-BASICO.md`](GIT-BASICO.md); Git es un tema nuevo, no visto en clase).
 8. Todo lo vas a **sustentar en vivo**.

@@ -1,6 +1,6 @@
 # Guía de instalación
 
-Hay dos caminos. **Como ya tienes Claude Code instalado, el camino A es el recomendado**: tu propio Claude te guía paso a paso, te explica cada cosa y resuelve los errores contigo, sin que tengas que descifrar una guía larga. El camino B es la guía manual de siempre, por si prefieres hacerlo tú o Claude Code no está disponible.
+Hay dos caminos. **Si ya tienes Claude Code instalado, el camino A es el recomendado**: tu propio Claude te guía paso a paso, te explica cada cosa y resuelve los errores contigo, sin que tengas que descifrar una guía larga. El camino B es la guía manual de siempre, por si prefieres hacerlo tú o no tienes Claude Code (para instalarlo, mira [`USAR-IA.md`](USAR-IA.md#instalación)).
 
 ## Camino A (recomendado): Claude Code te guía
 
@@ -40,13 +40,13 @@ Al terminar, tu ambiente queda verificado y ya estás dentro del repositorio con
 
 ## Camino B: guía manual
 
-Esta guía asume que **nunca** has configurado un ambiente de programación. Si ya tienes Node.js, Git y VS Code, salta a [Paso 5](#paso-5-trae-el-repositorio-y-verifica).
+Esta guía asume que **nunca** has configurado un ambiente de programación. Si ya tienes Node.js, Git y VS Code, salta al [Paso 5](#paso-5-trae-el-repositorio-y-verifica).
 
 Tiempo estimado: 20 a 30 minutos.
 
 ---
 
-## Antes de empezar: qué es la terminal
+### Antes de empezar: qué es la terminal
 
 La **terminal** es una ventana donde escribes comandos en vez de hacer clic. La vas a usar poco, pero la necesitas.
 
@@ -69,7 +69,7 @@ Comandos básicos que te servirán:
 
 ---
 
-## Paso 1: instala Node.js
+### Paso 1: instala Node.js
 
 **Node.js** permite ejecutar JavaScript fuera del navegador y trae **npm**, el programa que descarga librerías (por ejemplo TypeScript).
 
@@ -99,7 +99,7 @@ nvm install --lts
 
 ---
 
-## Paso 2: instala Git
+### Paso 2: instala Git
 
 **Git** guarda el historial de tu código y permite subirlo a GitHub.
 
@@ -122,7 +122,7 @@ git config --global user.email "tu-correo@ejemplo.com"
 
 ---
 
-## Paso 3: instala Visual Studio Code
+### Paso 3: instala Visual Studio Code
 
 **VS Code** es el editor donde escribirás tu código.
 
@@ -136,27 +136,25 @@ Comprueba con `code --version`. Si no funciona, no pasa nada: puedes abrir la ca
 
 ---
 
-## Paso 4: cuenta de GitHub
+### Paso 4: cuenta de GitHub
 
 1. Crea una cuenta gratuita en <https://github.com>.
 2. Verifica tu correo.
-3. Más adelante la usarás para guardar tu proyecto y, si haces el bonus, para publicarlo en Vercel.
+3. La usarás para guardar tu proyecto con Git (**Git es un tema nuevo, se explica en [`GIT-BASICO.md`](GIT-BASICO.md)**) y, si haces el bonus, para publicarlo en Vercel. Tu repositorio debe ser **público**.
 
 ---
 
-## Paso 5: trae el repositorio y verifica
+### Paso 5: trae el repositorio y verifica
 
-### 5.1 Consigue tu copia
+#### 5.1 Consigue tu copia
 
 **Opción A, la recomendada (plantilla):** en la página del repositorio (<https://github.com/JevDev2304/curso-js-ts-api>) pulsa **Use this template → Create a new repository**. Ponle un nombre, déjalo **Public** y créalo. Ahora tienes tu propio repositorio con todos los materiales.
 
-**Opción B (clonar directamente):** si tu profesor no activó la plantilla, clona el repositorio tal cual:
+**Opción B (si no ves el botón *Use this template*):** pulsa **Fork** (arriba a la derecha) y crea la copia en tu cuenta. Es lo mismo: queda un repositorio tuyo.
 
-```bash
-git clone https://github.com/JevDev2304/curso-js-ts-api.git
-```
+> **No clones directamente el repositorio original** (`git clone` de `JevDev2304/curso-js-ts-api`): no podrías subir tu trabajo a tu GitHub, y necesitas hacerlo (una rama por nivel y, si haces el bonus, Vercel).
 
-### 5.2 Clónalo en tu computador
+#### 5.2 Clónalo en tu computador
 
 Elige una carpeta donde guardarlo (por ejemplo `Documentos`) y ábrela en la terminal:
 
@@ -167,9 +165,9 @@ cd NOMBRE-DE-TU-REPO
 code .
 ```
 
-> En Windows en español la carpeta puede llamarse `Documentos` en lugar de `Documents`.
+> Aunque tu sistema muestre la carpeta como «Documentos», en la terminal se llama `Documents`. Si `cd Documents` falla, escribe `cd ~` (Mac, Linux o PowerShell) o `cd %USERPROFILE%` (Windows CMD) y vuelve a intentar.
 
-### 5.3 Instala las dependencias
+#### 5.3 Instala las dependencias
 
 Dentro de la carpeta del repositorio:
 
@@ -179,7 +177,7 @@ npm install
 
 Verás que se crea una carpeta `node_modules`. Es normal: ahí vive TypeScript. **No la subas ni la borres** (ya está ignorada por Git).
 
-### 5.4 Verifica todo
+#### 5.4 Verifica todo
 
 ```bash
 npm run verificar
@@ -200,9 +198,9 @@ Resultado esperado:
 ✓ Todo listo para empezar.
 ```
 
-Las líneas con `!` son avisos opcionales (VS Code, Claude Code). Las que tienen `✗` sí debes arreglarlas: el mismo mensaje te dice cómo.
+Las líneas con `!` son avisos opcionales (VS Code, Claude Code). Las que tienen `✗` sí debes arreglarlas: el mismo mensaje te dice cómo. Tu versión de Node, npm y Git puede ser distinta: no importa mientras Node sea 20 o superior.
 
-### 5.5 Abre los materiales
+#### 5.5 Abre los materiales
 
 ```bash
 npm run servir
@@ -212,9 +210,9 @@ Abre <http://localhost:5500> en tu navegador. Para detener el servidor, `Ctrl + 
 
 ---
 
-## Paso 6 (opcional): Claude Code
+### Paso 6 (opcional): Claude Code
 
-Solo si quieres usar el tutor configurado en este repositorio. Necesitas un plan de pago de Claude (Pro o superior). Mira [`USAR-IA.md`](USAR-IA.md). **No es necesario para hacer el curso.**
+Solo si quieres usar el tutor configurado en este repositorio. Necesitas un plan de pago de Claude (Pro o superior). La instalación y los comandos del tutor están en [`USAR-IA.md`](USAR-IA.md). **No es necesario para hacer el curso.**
 
 ---
 
@@ -222,7 +220,7 @@ Solo si quieres usar el tutor configurado en este repositorio. Necesitas un plan
 
 - [ ] `node --version` muestra 20 o superior.
 - [ ] `git --version` funciona y configuraste tu nombre y correo.
-- [ ] El repositorio está en tu computador y abierto en VS Code.
+- [ ] Tienes **tu propia copia** del repositorio (creada con *Use this template* o *Fork*), es **pública**, está en tu computador y abierta en VS Code.
 - [ ] `npm install` terminó sin errores.
 - [ ] `npm run verificar` termina con «Todo listo para empezar».
 - [ ] `npm run servir` abre el menú del curso en el navegador.
