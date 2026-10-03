@@ -39,13 +39,15 @@ Corrige con cariño y sigue.
    - Advierte que el **primer despliegue puede fallar** porque Vercel empieza por `main`, que no tiene `nivel7`. Es normal.
    - En **Settings → Environments → Production → Branch Tracking** cambiar la rama a `nivel-8` y **Save**.
    - **Deployments → Create Deployment**, escribir `nivel-8` y crear. Advierte que **Redeploy no deja elegir otra rama** (repite el último despliegue, de `main`).
-4. **Verificación**: que abra la URL pública en su **celular**, pruebe buscador, filtros y detalle, y confirme que carga datos de la API.
-5. **Cambio y redeploy**: que haga un cambio pequeño en su código (puede pedirte la pieza en el chat, pero **él** la acomoda y la prueba), lo suba con Git y vea cómo Vercel publica la nueva versión. Pregúntale: "¿qué activó el nuevo despliegue?".
-6. Recuérdale poner la **URL en su README** y adjuntar una captura desde el celular.
+4. **Acceso público**: que copie el **dominio de producción** (corto, el de *Domains*), lo abra en una **ventana de incógnito** y compruebe que **no** pide iniciar sesión en Vercel. Si la pide: **Settings → Deployment Protection → Vercel Authentication → desactivar → Save**. Explícale que Vercel, por defecto, protege las URLs de cada despliegue y de las ramas (solo las ve quien tenga cuenta), y que el dominio de producción suele ser público.
+5. **Verificación**: que abra la URL pública en su **celular**, pruebe buscador, filtros y detalle, y confirme que carga datos de la API.
+6. **Cambio y redeploy**: que haga un cambio pequeño en su código (puede pedirte la pieza en el chat, pero **él** la acomoda y la prueba), lo suba con Git y vea cómo Vercel publica la nueva versión. Pregúntale: "¿qué activó el nuevo despliegue?".
+7. Recuérdale poner la **URL en su README** y adjuntar una captura desde el celular.
 
 ## Si algo falla
 
 - **«No Output Directory named "public" found» o «No encuentro …/nivel7/index.html»** → Vercel está desplegando una rama sin `nivel7` (por ejemplo `main`) o falta el `git push` de `nivel-8`, o alguien cambió los ajustes. Que revise el Branch Tracking de Production (`nivel-8`) y que la rama muestre `nivel7` en GitHub.
+- **Me pide iniciar sesión en Vercel** → protección de despliegues: compartir el dominio de producción o desactivar Vercel Authentication (Settings → Deployment Protection).
 - **404** → falta `index.html` dentro de `nivel7`.
 - **Falla el Build** → que ejecute `npm run build` en local: Vercel hace lo mismo y suele ser un error de tipos.
 - **Página sin datos** → DevTools (Console y Network). Suele ser la ruta del `<script src>` mal escrita.
