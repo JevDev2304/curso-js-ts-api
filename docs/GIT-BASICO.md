@@ -65,7 +65,7 @@ Cada nivel nace de la rama del nivel anterior, así tu código se va acumulando.
 
 ```
 main ── (materiales del curso)
-  └─ nivel-1 ── nivel-2 ── nivel-3 ── ... ── nivel-7
+  └─ nivel-1 ── nivel-2 ── nivel-3 ── ... ── nivel-7 ── nivel-8 (bonus: la que despliegas)
 ```
 
 ### Paso a paso con el nivel 1
@@ -125,24 +125,25 @@ Cortos, en español y diciendo **qué lograste**:
 - ✅ `Arreglo: el ki viene como texto`
 - ❌ `cambios`, `listo`, `asdf`
 
-### Al terminar: juntar todo en `main` (necesario para el bonus de Vercel)
+### Nivel 8 (bonus): una rama para publicar en Vercel
 
-Vercel publica por defecto la rama `main`. Para llevar tu trabajo allí:
+El bonus tiene su propia rama, igual que los demás niveles: **`nivel-8`**. Nace de `nivel-7` y es la que vas a desplegar. No hace falta tocar `main`.
 
 ```bash
-git checkout main
-git merge nivel-7        # trae a main todo lo de nivel-7
-git push                 # sube main a GitHub
+git checkout nivel-7             # parte de tu último nivel
+git status                       # debe estar limpio
+git checkout -b nivel-8          # crea la rama del bonus y te mueve a ella
+git push -u origin nivel-8       # súbela a GitHub
 ```
 
-`git merge` junta una rama dentro de la rama en la que estás. Como `nivel-7` ya contiene todos los niveles anteriores, `main` queda completo.
+En Vercel eliges esa rama como **Production Branch** (el enunciado y `DEPLOY-VERCEL.md` explican cómo). Cada `git push` que hagas desde `nivel-8` vuelve a publicar tu página.
 
 ---
 
 ## 4. Lo que debes entregar sobre Git
 
 1. Tu repositorio de GitHub es **público** (Settings → General → *Danger Zone* → *Change visibility* → Public, o márcalo como Public al crearlo). Tu profesor necesita poder verlo y Vercel lo necesita para publicarlo.
-2. En tu GitHub existen las ramas `nivel-1` … `nivel-7` (y `main`).
+2. En tu GitHub existen las ramas `nivel-1` … `nivel-7` (y `nivel-8` si haces el bonus), además de `main`.
 3. Cada nivel tiene al menos un commit con un mensaje claro.
 4. En tu `README.md` de `04-proyecto/dragonball/`, la sección **«Mis comandos de Git»** completa **con tus palabras** (qué hace cada comando y cuándo lo usaste).
 

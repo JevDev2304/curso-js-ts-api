@@ -90,7 +90,7 @@ Entra a <http://localhost:5500>. Verás el menú con todo el curso. Para detener
 | 5 | Aprender Git básico (ramas, commit, push) | [video intro de 2:30](https://www.youtube.com/watch?v=DinilgacaWs) → [`docs/GIT-BASICO.md`](docs/GIT-BASICO.md) → [curso completo](https://www.youtube.com/watch?v=T3roQrB_Jko&list=PLJ7sTTLrIA6klMtrvcpGXYkBFoUP3rqwo) (opcional) | 45 min |
 | 6 | Leer el enunciado y mirar el wireframe | `04-proyecto/proyecto-estudiante.html` | 20 min |
 | 7 | Hacer el proyecto (partes A a D), **una rama de Git por nivel** | `04-proyecto/dragonball/` | varios días |
-| 8 | *(Bonus)* Publicar en Vercel | [nivel 8 del enunciado](04-proyecto/proyecto-estudiante.html) | 30 min |
+| 8 | *(Bonus)* Publicar en Vercel (mira antes el [ejemplo resuelto](https://github.com/JevDev2304/curso-js-ts-api/tree/deploy-vercel-pokeapi-nivel-8)) | [nivel 8 del enunciado](04-proyecto/proyecto-estudiante.html) | 30 min |
 
 ---
 
@@ -115,7 +115,7 @@ Hoy nadie teclea todo desde cero, así que **no tienes que escribir el código a
 
 Tu repositorio de GitHub, **que debe ser público**, con:
 
-- La carpeta `04-proyecto/dragonball/` con tus niveles (`nivel1` … `nivel7`), **subidos a GitHub en una rama por nivel** (`nivel-1` … `nivel-7`) y juntos en `main`.
+- La carpeta `04-proyecto/dragonball/` con tus niveles (`nivel1` … `nivel7`), **subidos a GitHub en una rama por nivel** (`nivel-1` … `nivel-7`, y `nivel-8` si haces el bonus de Vercel).
 - `04-proyecto/dragonball/README.md` completo (hay una plantilla): tus respuestas, tu diseño, tus decisiones, la bitácora de errores y la bitácora de conversación con la IA.
 - *(Bonus)* La URL de tu página publicada en Vercel.
 
