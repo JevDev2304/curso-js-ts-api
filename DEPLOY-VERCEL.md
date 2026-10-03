@@ -4,9 +4,8 @@
 > Tu trabajo se hace en **tu propio repositorio**, y la rama que **tú** despliegas es **`nivel-8`**, no esta. Lee esta rama, entiéndela y haz lo equivalente con tu proyecto.
 
 - 🌐 **Página publicada de este ejemplo:** mira el campo *Website* en la parte superior derecha de este repositorio en GitHub.
-- 🔍 **Qué cambia respecto a `main`** (solo 3 archivos): [ver la comparación](https://github.com/JevDev2304/curso-js-ts-api/compare/main...deploy-vercel-pokeapi-nivel-8)
-  - `vercel.json` (la configuración del despliegue)
-  - `vercel.comentado.jsonc` (la misma configuración, con comentarios)
+- 🔍 **Qué cambia respecto a `main`** (solo 2 archivos): [ver la comparación](https://github.com/JevDev2304/curso-js-ts-api/compare/main...deploy-vercel-pokeapi-nivel-8)
+  - `vercel.toml` (la configuración del despliegue, con comentarios)
   - `DEPLOY-VERCEL.md` (este archivo)
 
 ---
@@ -21,42 +20,38 @@ Para saber **qué hacer** con tu repositorio, Vercel necesita contestar tres pre
 2. ¿Qué ejecuto para construir la página? → compilar los `.ts` a `.js`.
 3. ¿Qué carpeta publico? → la que tiene el `index.html` final.
 
-Esas tres respuestas están en el archivo [`vercel.json`](vercel.json).
+Esas tres respuestas están en el archivo [`vercel.toml`](vercel.toml).
 
 ---
 
-## 2. El archivo `vercel.json`, línea por línea
+## 2. El archivo `vercel.toml`, línea por línea
 
-> ℹ️ `vercel.json` **no puede llevar comentarios** (Vercel lo lee como JSON y los comentarios no son JSON válido). Por eso la versión explicada está en [`vercel.comentado.jsonc`](vercel.comentado.jsonc): léela con calma, es la misma configuración con un comentario en cada línea.
+> ℹ️ Vercel acepta su configuración en `vercel.toml` o en [`vercel.toml`](https://vercel.com/docs/project-configuration/vercel-toml) (solo se usa **uno**). Elegimos **TOML** porque, a diferencia de JSON, **permite comentarios**: el archivo se explica solo. Abre [`vercel.toml`](vercel.toml) y léelo de arriba abajo.
 
-```jsonc
-{
-  // Ayuda al editor a autocompletar y avisar errores. No afecta el despliegue.
-  "$schema": "https://openapi.vercel.sh/vercel.json",
+```toml
+# Ayuda al editor a autocompletar y avisar errores. No afecta el despliegue.
+"$schema" = "https://openapi.vercel.sh/vercel.json"
 
-  // Ningún framework: es HTML + CSS + TypeScript a secas.
-  "framework": null,
+# 1) ¿QUÉ INSTALO? Las dependencias del proyecto (TypeScript).
+installCommand = "npm install"
 
-  // 1) ¿QUÉ INSTALO? Las dependencias del proyecto (TypeScript).
-  "installCommand": "npm install",
+# 2) ¿QUÉ EJECUTO PARA CONSTRUIR? Compila los .ts a .js (el navegador no entiende TypeScript).
+buildCommand = "npm run build:pokedex"
 
-  // 2) ¿QUÉ EJECUTO PARA CONSTRUIR? Compila los .ts a .js (el navegador no entiende TypeScript).
-  "buildCommand": "npm run build:pokedex",
-
-  // 3) ¿QUÉ CARPETA PUBLICO? Solo esta carpeta llega a internet; debe existir después de construir.
-  "outputDirectory": "03-pokedex-pasos/paso7"
-}
+# 3) ¿QUÉ CARPETA PUBLICO? Solo esta carpeta llega a internet; debe existir después de construir.
+outputDirectory = "03-pokedex-pasos/paso7"
 ```
+
+(No hay línea `framework`: la página no usa ningún framework.)
 
 | Campo | Qué significa | En este ejemplo | **En tu proyecto de Dragon Ball** |
 |---|---|---|---|
-| `$schema` | Ayuda al editor a autocompletar y validar el archivo | (déjalo igual) | (déjalo igual) |
-| `framework` | Qué framework usa tu página. `null` = ninguno (HTML, CSS y TS a secas) | `null` | `null` |
+| `"$schema"` | Ayuda al editor a autocompletar y validar el archivo | (déjalo igual) | (déjalo igual) |
 | `installCommand` | Comando que descarga las dependencias | `npm install` | `npm install` |
 | `buildCommand` | Comando que **construye** la página (aquí: compila TypeScript) | `npm run build:pokedex` | `npm run build` |
 | `outputDirectory` | **La carpeta que Vercel publica en internet** | `03-pokedex-pasos/paso7` | `04-proyecto/dragonball/nivel7` |
 
-> 💡 Los tres campos que cambian son el comando de build y la carpeta que se publica. Fíjate que en ambos casos el comando de build es un script del `package.json` de la raíz.
+> 💡 Entre este ejemplo y tu proyecto solo cambian dos líneas: el comando de build y la carpeta que se publica. Fíjate que en ambos casos el comando de build es un script del `package.json` de la raíz.
 
 ---
 
@@ -66,7 +61,7 @@ Esas tres respuestas están en el archivo [`vercel.json`](vercel.json).
 2. **Add New → Project** y elegí el repositorio `curso-js-ts-api`, luego **Import**.
 3. El primer despliegue lo hace Vercel sobre `main`, que en este repositorio no tiene la página que quiero publicar. **Esto puede fallar y es normal.**
 4. En el proyecto: **Settings → Git → Production Branch** y escribí `deploy-vercel-pokeapi-nivel-8`. Vercel publica como «producción» la rama que le indiques.
-5. **No toqué** Root Directory, Build Command ni Output Directory: los toma de `vercel.json`.
+5. **No toqué** Root Directory, Build Command ni Output Directory: los toma de `vercel.toml`.
 6. Hice **Redeploy** (pestaña *Deployments*), esperé el registro (*Build Logs*) y abrí la URL pública.
 7. Probé la página en el computador y en el celular.
 8. Copié la URL en el campo *Website* del repositorio.
@@ -84,7 +79,7 @@ Esas tres respuestas están en el archivo [`vercel.json`](vercel.json).
 | Production Branch = `deploy-vercel-pokeapi-nivel-8` | Production Branch = **`nivel-8`** |
 | Página: Pokédex paso 7 (`03-pokedex-pasos/paso7`) | Página: tu `04-proyecto/dragonball/nivel7` |
 | Script de build: `npm run build:pokedex` | Script de build: `npm run build` |
-| `vercel.json` de esta rama | **Tu repositorio ya trae un `vercel.json` listo** (viene en `main` y llega a tus ramas). Ábrelo y compruébalo contra la tabla de la sección 2 |
+| `vercel.toml` de esta rama | **Tu repositorio ya trae un `vercel.toml` listo** (viene en `main` y llega a tus ramas). Ábrelo y compruébalo contra la tabla de la sección 2 |
 
 ---
 
@@ -95,7 +90,7 @@ Esas tres respuestas están en el archivo [`vercel.json`](vercel.json).
 - [ ] Existe `04-proyecto/dragonball/nivel7/index.html` y mi `main.ts`.
 - [ ] Creé la rama `nivel-8` desde `nivel-7` y la subí con `git push -u origin nivel-8`.
 - [ ] En GitHub, la rama `nivel-8` muestra mi carpeta `04-proyecto/dragonball/nivel7`.
-- [ ] Revisé que mi `vercel.json` apunta a `04-proyecto/dragonball/nivel7` y usa `npm run build`.
+- [ ] Revisé que mi `vercel.toml` apunta a `04-proyecto/dragonball/nivel7` y usa `npm run build`.
 - [ ] En Vercel importé **mi** repositorio, puse `nivel-8` como Production Branch y hice Redeploy, sin cambiar los demás ajustes.
 - [ ] Abrí la URL en mi **celular** y funcionan el buscador, los filtros y el detalle.
 - [ ] Puse la URL en mi `README.md` y adjunté una captura del celular.

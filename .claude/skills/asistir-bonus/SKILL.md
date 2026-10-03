@@ -19,13 +19,13 @@ Si algo falla, devuélvelo a `/asistir-proyecto`.
 
 ## Ejemplo resuelto de referencia
 
-En el repositorio del curso existe la rama `deploy-vercel-pokeapi-nivel-8` (https://github.com/JevDev2304/curso-js-ts-api/tree/deploy-vercel-pokeapi-nivel-8) que despliega la Pokédex. Su `DEPLOY-VERCEL.md` explica el `vercel.json` y traduce el ejemplo al proyecto del estudiante. Pídele que **lo lea primero** y que te explique qué hace cada campo antes de empezar su despliegue. Esa rama no se modifica y el estudiante no la despliega: su despliegue va en su propio repositorio, desplegando su rama `nivel-8`.
+En el repositorio del curso existe la rama `deploy-vercel-pokeapi-nivel-8` (https://github.com/JevDev2304/curso-js-ts-api/tree/deploy-vercel-pokeapi-nivel-8) que despliega la Pokédex. Su `DEPLOY-VERCEL.md` explica el `vercel.toml` y traduce el ejemplo al proyecto del estudiante. Pídele que **lo lea primero** y que te explique qué hace cada campo antes de empezar su despliegue. Esa rama no se modifica y el estudiante no la despliega: su despliegue va en su propio repositorio, desplegando su rama `nivel-8`.
 
 ## Pregunta de entrada (concepto)
 
 Antes de tocar nada, pregúntale y escucha:
 1. ¿Qué es "hacer hosting" de una página y en qué se diferencia de abrirla desde tu computador?
-2. ¿Por qué el navegador necesita `main.js` y no `main.ts`, y quién lo genera en Vercel? (Respuesta: el `vercel.json` ejecuta `npm run build` al desplegar.)
+2. ¿Por qué el navegador necesita `main.js` y no `main.ts`, y quién lo genera en Vercel? (Respuesta: el `vercel.toml` ejecuta `npm run build` al desplegar.)
 
 Corrige con cariño y sigue.
 
@@ -35,7 +35,7 @@ Corrige con cariño y sigue.
 2. **Rama del bonus**: él escribe `git checkout nivel-7`, `git checkout -b nivel-8` y `git push -u origin nivel-8`. Esa es la rama que se despliega (no `main`). Explícale antes por qué `nivel-8` nace de `nivel-7` (arrastra todo su trabajo). Tú compruebas con `git branch` y `git log --oneline`, y que en GitHub la rama `nivel-8` muestre `04-proyecto/dragonball/nivel7`.
 3. **Vercel** (en el navegador, guíalo con las pantallas):
    - Entrar con GitHub → **Add New → Project** → importar el repositorio.
-   - **No cambiar** Root Directory, Build Command ni Output Directory: el `vercel.json` de la raíz del repositorio ya los define (instala, ejecuta `npm run build` y publica `04-proyecto/dragonball/nivel7`). Explícale qué hace ese archivo.
+   - **No cambiar** Root Directory, Build Command ni Output Directory: el `vercel.toml` de la raíz del repositorio ya los define (instala, ejecuta `npm run build` y publica `04-proyecto/dragonball/nivel7`). Explícale qué hace ese archivo.
    - Advierte que el **primer despliegue puede fallar** porque Vercel empieza por `main`, que no tiene `nivel7`. Es normal.
    - En **Settings → Git → Production Branch** poner `nivel-8` y hacer **Redeploy**.
 4. **Verificación**: que abra la URL pública en su **celular**, pruebe buscador, filtros y detalle, y confirme que carga datos de la API.
