@@ -15,8 +15,8 @@ const niveles = readdirSync(root, { withFileTypes: true })
 const enVercel = Boolean(process.env.VERCEL);
 if (enVercel && !existsSync(join(root, "nivel7", "index.html"))) {
   console.error("✗ No encuentro 04-proyecto/dragonball/nivel7/index.html.");
-  console.error("  Vercel publica tu nivel 7. Comprueba que esa carpeta existe y que está subida a la rama main de tu repositorio");
-  console.error("  (en tu computador: git checkout main, git merge nivel-7, git push).");
+  console.error("  Vercel publica tu nivel 7. Comprueba que esa carpeta existe en la rama que estás desplegando (nivel-8)");
+  console.error("  y que hiciste git push de esa rama. En Vercel: Settings → Git → Production Branch = nivel-8.");
   process.exit(1);
 }
 

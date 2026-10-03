@@ -74,7 +74,7 @@ git push -u origin nivel-1       # subir la rama a mi GitHub (la primera vez)
 git checkout -b nivel-2          # el nivel 2 nace desde el 1
 ```
 
-Para moverte entre niveles: `git checkout nivel-3`. Para traer cambios de GitHub: `git pull`. Al terminar, junta todo en `main` (lo necesita el bonus): `git checkout main`, `git merge nivel-7`, `git push`.
+Para moverte entre niveles: `git checkout nivel-3`. Para traer cambios de GitHub: `git pull`. Si haces el bonus, crea la rama `nivel-8` desde `nivel-7` (`git checkout nivel-7`, `git checkout -b nivel-8`, `git push -u origin nivel-8`): es la que despliegas en Vercel.
 
 Recuerda: tu repositorio de GitHub debe ser **público**.
 

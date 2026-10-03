@@ -115,7 +115,7 @@ Hoy nadie teclea todo desde cero, así que **no tienes que escribir el código a
 
 Tu repositorio de GitHub, **que debe ser público**, con:
 
-- La carpeta `04-proyecto/dragonball/` con tus niveles (`nivel1` … `nivel7`), **subidos a GitHub en una rama por nivel** (`nivel-1` … `nivel-7`) y juntos en `main`.
+- La carpeta `04-proyecto/dragonball/` con tus niveles (`nivel1` … `nivel7`), **subidos a GitHub en una rama por nivel** (`nivel-1` … `nivel-7`, y `nivel-8` si haces el bonus de Vercel).
 - `04-proyecto/dragonball/README.md` completo (hay una plantilla): tus respuestas, tu diseño, tus decisiones, la bitácora de errores y la bitácora de conversación con la IA.
 - *(Bonus)* La URL de tu página publicada en Vercel.
 

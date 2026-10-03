@@ -59,7 +59,7 @@ Explica cada comando **con tus palabras**: qué hace y cuándo lo usaste en este
 | `git pull` | _…_ | _…_ |
 
 **Mi repositorio de GitHub (público):** _enlace_
-**Mis ramas:** _`nivel-1` … `nivel-7` y `main`_
+**Mis ramas:** _`nivel-1` … `nivel-7` y, si hice el bonus, `nivel-8`_
 
 ## Bitácora de conversación con la IA
 
