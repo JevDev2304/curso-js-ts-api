@@ -60,9 +60,11 @@ outputDirectory = "03-pokedex-pasos/paso7"
 1. Entré a <https://vercel.com> con mi cuenta de GitHub.
 2. **Add New → Project** y elegí el repositorio `curso-js-ts-api`, luego **Import**.
 3. El primer despliegue lo hace Vercel sobre `main`, que en este repositorio no tiene la página que quiero publicar. **Esto puede fallar y es normal.**
-4. En el proyecto: **Settings → Git → Production Branch** y escribí `deploy-vercel-pokeapi-nivel-8`. Vercel publica como «producción» la rama que le indiques.
+4. En el proyecto: **Settings → Environments → Production → Branch Tracking**. Cambié el nombre de la rama de `main` a `deploy-vercel-pokeapi-nivel-8` y pulsé **Save**. Vercel publica como «producción» la rama que le indiques ahí.
 5. **No toqué** Root Directory, Build Command ni Output Directory: los toma de `vercel.toml`.
-6. Hice **Redeploy** (pestaña *Deployments*), esperé el registro (*Build Logs*) y abrí la URL pública.
+6. Pestaña **Deployments → Create Deployment**, escribí el nombre de la rama (`deploy-vercel-pokeapi-nivel-8`) y pulsé **Create Deployment**. Esperé el registro (*Build Logs*) hasta que terminó bien.
+
+   > ⚠️ **No uses el botón «Redeploy» para esto.** Redeploy repite el *mismo código* del último despliegue (el de `main`) y no deja elegir otra rama. Para desplegar otra rama usa **Create Deployment**, o simplemente haz un `git push` en esa rama.
 7. Probé la página en el computador y en el celular.
 8. Copié la URL en el campo *Website* del repositorio.
 
@@ -76,7 +78,7 @@ outputDirectory = "03-pokedex-pasos/paso7"
 |---|---|
 | Repositorio `curso-js-ts-api` | **Tu** repositorio público |
 | Rama desplegada: `deploy-vercel-pokeapi-nivel-8` | Rama desplegada: **`nivel-8`** (creada desde `nivel-7`: `git checkout nivel-7`, `git checkout -b nivel-8`, `git push -u origin nivel-8`) |
-| Production Branch = `deploy-vercel-pokeapi-nivel-8` | Production Branch = **`nivel-8`** |
+| Branch Tracking de Production = `deploy-vercel-pokeapi-nivel-8` | Branch Tracking de Production = **`nivel-8`** |
 | Página: Pokédex paso 7 (`03-pokedex-pasos/paso7`) | Página: tu `04-proyecto/dragonball/nivel7` |
 | Script de build: `npm run build:pokedex` | Script de build: `npm run build` |
 | `vercel.toml` de esta rama | **Tu repositorio ya trae un `vercel.toml` listo** (viene en `main` y llega a tus ramas). Ábrelo y compruébalo contra la tabla de la sección 2 |
@@ -91,7 +93,7 @@ outputDirectory = "03-pokedex-pasos/paso7"
 - [ ] Creé la rama `nivel-8` desde `nivel-7` y la subí con `git push -u origin nivel-8`.
 - [ ] En GitHub, la rama `nivel-8` muestra mi carpeta `04-proyecto/dragonball/nivel7`.
 - [ ] Revisé que mi `vercel.toml` apunta a `04-proyecto/dragonball/nivel7` y usa `npm run build`.
-- [ ] En Vercel importé **mi** repositorio, puse `nivel-8` como Production Branch y hice Redeploy, sin cambiar los demás ajustes.
+- [ ] En Vercel importé **mi** repositorio, puse `nivel-8` en el Branch Tracking de Production y creé el despliegue de esa rama (Deployments → Create Deployment), sin cambiar los demás ajustes.
 - [ ] Abrí la URL en mi **celular** y funcionan el buscador, los filtros y el detalle.
 - [ ] Puse la URL en mi `README.md` y adjunté una captura del celular.
 
@@ -102,7 +104,7 @@ outputDirectory = "03-pokedex-pasos/paso7"
 1. ¿Por qué `outputDirectory` apunta a una subcarpeta y no a la raíz del repositorio?
 2. ¿Qué pasaría si borras la línea `buildCommand`? ¿Qué archivo faltaría para que el navegador funcione?
 3. ¿Quién genera el `main.js` en Vercel? ¿Y en tu computador?
-4. ¿Por qué el primer despliegue (de `main`) puede fallar? ¿Qué rama publica Vercel como «producción» y dónde se cambia?
+4. ¿Por qué el primer despliegue (de `main`) puede fallar? ¿Qué rama publica Vercel como «producción» y dónde se cambia? ¿Por qué el botón «Redeploy» no sirve para cambiar de rama?
 5. Haces un cambio y `git push`. ¿Qué pasa en Vercel sin que hagas nada más?
 
 ---
