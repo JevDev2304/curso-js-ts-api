@@ -65,8 +65,9 @@ outputDirectory = "03-pokedex-pasos/paso7"
 6. Pestaña **Deployments → Create Deployment**, escribí el nombre de la rama (`deploy-vercel-pokeapi-nivel-8`) y pulsé **Create Deployment**. Esperé el registro (*Build Logs*) hasta que terminó bien.
 
    > ⚠️ **No uses el botón «Redeploy» para esto.** Redeploy repite el *mismo código* del último despliegue (el de `main`) y no deja elegir otra rama. Para desplegar otra rama usa **Create Deployment**, o simplemente haz un `git push` en esa rama.
-7. Probé la página en el computador y en el celular.
-8. Copié la URL en el campo *Website* del repositorio.
+7. **Hice la página pública.** Copié el **dominio de producción** (el corto, en *Domains*, tipo `algo.vercel.app`; no la URL larga de un despliegue concreto) y lo abrí en una **ventana de incógnito**. Si Vercel pide iniciar sesión, la causa es la **protección de despliegues**: en **Settings → Deployment Protection** desactivé **Vercel Authentication** y pulsé **Save**. Volví a probar en incógnito hasta que abrió sin pedir nada.
+8. Probé la página en el computador y en el celular.
+9. Copié la URL en el campo *Website* del repositorio.
 
 **Tú harás lo mismo en tu repositorio, pero desplegando tu rama `nivel-8`** (la del bonus) en lugar de esta.
 
@@ -94,6 +95,7 @@ outputDirectory = "03-pokedex-pasos/paso7"
 - [ ] En GitHub, la rama `nivel-8` muestra mi carpeta `04-proyecto/dragonball/nivel7`.
 - [ ] Revisé que mi `vercel.toml` apunta a `04-proyecto/dragonball/nivel7` y usa `npm run build`.
 - [ ] En Vercel importé **mi** repositorio, puse `nivel-8` en el Branch Tracking de Production y creé el despliegue de esa rama (Deployments → Create Deployment), sin cambiar los demás ajustes.
+- [ ] Abrí el dominio de producción en una **ventana de incógnito** y NO pide iniciar sesión en Vercel (si lo pide: Settings → Deployment Protection → desactivar Vercel Authentication).
 - [ ] Abrí la URL en mi **celular** y funcionan el buscador, los filtros y el detalle.
 - [ ] Puse la URL en mi `README.md` y adjunté una captura del celular.
 
@@ -105,7 +107,8 @@ outputDirectory = "03-pokedex-pasos/paso7"
 2. ¿Qué pasaría si borras la línea `buildCommand`? ¿Qué archivo faltaría para que el navegador funcione?
 3. ¿Quién genera el `main.js` en Vercel? ¿Y en tu computador?
 4. ¿Por qué el primer despliegue (de `main`) puede fallar? ¿Qué rama publica Vercel como «producción» y dónde se cambia? ¿Por qué el botón «Redeploy» no sirve para cambiar de rama?
-5. Haces un cambio y `git push`. ¿Qué pasa en Vercel sin que hagas nada más?
+5. ¿Por qué una persona sin cuenta de Vercel no puede abrir la URL larga de un despliegue, pero sí el dominio de producción? ¿Dónde se cambia?
+6. Haces un cambio y `git push`. ¿Qué pasa en Vercel sin que hagas nada más?
 
 ---
 
