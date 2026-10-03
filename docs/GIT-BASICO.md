@@ -133,6 +133,8 @@ Cortos, en español y diciendo **qué lograste**:
 
 El bonus tiene su propia rama, igual que los demás niveles: **`nivel-8`**. Nace de `nivel-7` y es la que vas a desplegar. No hace falta tocar `main`.
 
+> **Si hiciste también el bonus de planetas:** el código de planetas va en una rama `bonus-planetas` creada desde `nivel-7`, y `nivel-8` nace **desde `bonus-planetas`** (`git checkout bonus-planetas`, `git checkout -b nivel-8`), para que la página publicada incluya los planetas.
+
 ```bash
 git checkout nivel-7             # parte de tu último nivel
 git status                       # debe estar limpio

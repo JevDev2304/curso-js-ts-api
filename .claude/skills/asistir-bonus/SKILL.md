@@ -32,7 +32,7 @@ Corrige con cariño y sigue.
 ## Pasos (él ejecuta los clics; tú los comandos de Git)
 
 1. **Repositorio y ramas**: verifica con `git status`, `git branch` y `git remote -v` que su repositorio está en su GitHub, que es **público** (pídele que lo confirme en GitHub) y que existen `nivel-1` … `nivel-7`. Si no, mándalo a `docs/GIT-BASICO.md`.
-2. **Rama del bonus**: él escribe `git checkout nivel-7`, `git checkout -b nivel-8` y `git push -u origin nivel-8`. Esa es la rama que se despliega (no `main`). Explícale antes por qué `nivel-8` nace de `nivel-7` (arrastra todo su trabajo). Tú compruebas con `git branch` y `git log --oneline`, y que en GitHub la rama `nivel-8` muestre `04-proyecto/dragonball/nivel7`.
+2. **Rama del bonus**: él escribe `git checkout nivel-7`, `git checkout -b nivel-8` y `git push -u origin nivel-8`. (Si hizo el bonus de planetas, `nivel-8` nace de `bonus-planetas`, para que la página publicada los incluya.) Esa es la rama que se despliega (no `main`). Explícale antes por qué `nivel-8` nace de `nivel-7` (arrastra todo su trabajo). Tú compruebas con `git branch` y `git log --oneline`, y que en GitHub la rama `nivel-8` muestre `04-proyecto/dragonball/nivel7`.
 3. **Vercel** (en el navegador, guíalo con las pantallas):
    - Entrar con GitHub → **Add New → Project** → importar el repositorio.
    - **No cambiar** Root Directory, Build Command ni Output Directory: el `vercel.toml` de la raíz del repositorio ya los define (instala, ejecuta `npm run build` y publica `04-proyecto/dragonball/nivel7`). Explícale qué hace ese archivo.

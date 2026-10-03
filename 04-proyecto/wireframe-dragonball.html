@@ -89,7 +89,7 @@ th{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--mute
 <button class="theme-btn" id="themeBtn" aria-label="Cambiar tema">◐ Tema</button>
 <main>
   <h1>Wireframe <span>Dragon Ball</span></h1>
-  <p class="lead">Mi sobrino quiere una página para ver sus personajes favoritos de Dragon Ball. Son <b>solo dos pantallas</b>: un listado con buscador y filtros, y el detalle de un personaje. Aquí están en versión web y en versión móvil. Es un boceto en gris a propósito: la forma y la distribución, sin colores ni estilo.</p>
+  <p class="lead">Mi sobrino quiere una página para ver sus personajes favoritos de Dragon Ball. Son <b>solo dos pantallas</b>: un listado con buscador y filtros, y el detalle de un personaje. Aquí están en versión web y en versión móvil. Más abajo, como <b>bonus ★</b>, la misma idea con planetas. Es un boceto en gris a propósito: la forma y la distribución, sin colores ni estilo.</p>
 
   <h2>Versión web</h2>
   <div class="scroll"><div class="flow">
@@ -100,6 +100,7 @@ th{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--mute
         <div class="chrome"><i></i><i></i><i></i><div class="url">mi-dragonball.vercel.app</div></div>
         <div class="screen">
           <div class="bar"><div class="logo">LOGO</div><div class="ln h w30"></div><div class="ln w20"></div></div>
+          <div class="chips" style="position:relative"><span class="chip on">Personajes</span><span class="chip" style="border-style:dashed">Planetas ★ bonus</span><i class="pin tl">6</i></div>
           <div style="max-width:380px;margin-inline:auto;width:100%;position:relative"><div class="search">⌕ Buscar personaje…</div><i class="pin tr">1</i></div>
           <div class="chips"><span class="chip on">Todos</span><span class="chip">Saiyan</span><span class="chip">Namekian</span><span class="chip">Human</span><span class="chip">Android</span><span class="sel">Afiliación ▾</span><i class="pin tl">2</i></div>
           <div class="ln w30"></div>
@@ -136,7 +137,7 @@ th{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--mute
                 <div class="bar2">Ki máx.<div class="track"><i style="inset:0 15% 0 0"></i></div></div>
               </div><span class="fld">ki · maxKi (¡vienen como texto!)</span>
               <div class="ln w100"></div><div class="ln w100"></div><div class="ln w80"></div><span class="fld">description</span>
-              <div class="box" style="grid-template-columns:44px 1fr;align-items:center"><div class="img" style="height:44px"></div><div><div class="lbl">Planeta de origen</div><div class="ln w60"></div></div></div><span class="fld">originPlanet</span>
+              <div class="box" style="grid-template-columns:44px 1fr;align-items:center;border-style:dashed;position:relative"><div class="img" style="height:44px"></div><div><div class="lbl">Planeta de origen ★</div><div class="ln w60"></div></div><i class="pin tr">7</i></div><span class="fld">originPlanet · clic → detalle del planeta (bonus)</span>
             </div>
           </div>
           <div class="lbl">Transformaciones</div>
@@ -156,6 +157,7 @@ th{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--mute
         <div class="notch"><i></i></div>
         <div class="screen">
           <div class="bar"><div class="logo">LOGO</div><div class="ln h w40"></div></div>
+          <div class="chips" style="position:relative"><span class="chip on">Personajes</span><span class="chip" style="border-style:dashed">Planetas ★</span><i class="pin tl">6</i></div>
           <div class="search" style="position:relative">⌕ Buscar…<i class="pin tr">1</i></div>
           <div class="chips"><span class="chip on">Todos</span><span class="chip">Saiyan</span><span class="chip">Namekian</span><span class="chip">Human</span><i class="pin tl">2</i></div>
           <div class="ln w30"></div>
@@ -196,6 +198,89 @@ th{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--mute
     </div>
   </div></div>
 
+  <h2>Bonus · Planetas ★</h2>
+  <p class="lead">Es opcional y se suma a lo anterior: la misma página, con una segunda pestaña para ver los <b>planetas</b> de Dragon Ball. Mismo patrón que los personajes (listado con búsqueda y filtro, y detalle al hacer clic), con otros datos. En la pantalla de un personaje, el planeta de origen puede llevar al detalle de ese planeta.</p>
+  <div class="scroll"><div class="flow">
+    <!-- PLANETAS · WEB LISTADO -->
+    <div>
+      <p class="cap">Web · Planetas (listado)</p>
+      <div class="wf web">
+        <div class="chrome"><i></i><i></i><i></i><div class="url">mi-dragonball.vercel.app</div></div>
+        <div class="screen">
+          <div class="bar"><div class="logo">LOGO</div><div class="ln h w30"></div><div class="ln w20"></div></div>
+          <div class="chips"><span class="chip">Personajes</span><span class="chip on" style="border-style:dashed">Planetas ★ bonus</span></div>
+          <div style="max-width:380px;margin-inline:auto;width:100%"><div class="search">⌕ Buscar planeta…</div></div>
+          <div class="chips"><span class="chip on">Todos</span><span class="chip">Existen</span><span class="chip">Destruidos</span></div>
+          <div class="ln w30"></div>
+          <div class="grid g4">
+            <div class="card hot"><div class="img"><span>image</span></div><div class="ln h w60"></div><span class="chip" style="width:max-content">estado</span></div>
+            <div class="card"><div class="img"><span>image</span></div><div class="ln h w70"></div><span class="chip" style="width:max-content">estado</span></div>
+            <div class="card"><div class="img"><span>image</span></div><div class="ln h w50"></div><span class="chip" style="width:max-content">estado</span></div>
+            <div class="card"><div class="img"><span>image</span></div><div class="ln h w60"></div><span class="chip" style="width:max-content">estado</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="next"><b>→</b>clic en un planeta</div>
+    <!-- PLANETAS · WEB DETALLE -->
+    <div>
+      <p class="cap">Web · Planeta (detalle)</p>
+      <div class="wf web">
+        <div class="chrome"><i></i><i></i><i></i><div class="url">mi-dragonball.vercel.app</div></div>
+        <div class="screen">
+          <div class="btn">← Volver a planetas</div>
+          <div class="two">
+            <div class="img" style="height:230px"><span>image</span></div>
+            <div class="stack">
+              <div class="ln h w60" style="height:20px"></div><span class="fld">name</span>
+              <div class="chips"><span class="chip">estado</span></div><span class="fld">isDestroyed → “Existe” / “Destruido”</span>
+              <div class="ln w100"></div><div class="ln w100"></div><div class="ln w80"></div><div class="ln w60"></div><span class="fld">description</span>
+              <div class="lbl">Personajes de este planeta (opcional)</div>
+              <div class="thumbs"><div class="img"></div><div class="img"></div><div class="img"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div></div>
+  <div class="scroll"><div class="flow">
+    <!-- PLANETAS · MÓVIL -->
+    <div>
+      <p class="cap">Móvil · Planetas (listado)</p>
+      <div class="wf phone">
+        <div class="notch"><i></i></div>
+        <div class="screen">
+          <div class="bar"><div class="logo">LOGO</div><div class="ln h w40"></div></div>
+          <div class="chips"><span class="chip">Personajes</span><span class="chip on" style="border-style:dashed">Planetas ★</span></div>
+          <div class="search">⌕ Buscar…</div>
+          <div class="chips"><span class="chip on">Todos</span><span class="chip">Existen</span><span class="chip">Destruidos</span></div>
+          <div class="grid g2">
+            <div class="card hot"><div class="img"><span>image</span></div><div class="ln h w60"></div><span class="chip" style="width:max-content">estado</span></div>
+            <div class="card"><div class="img"><span>image</span></div><div class="ln h w70"></div><span class="chip" style="width:max-content">estado</span></div>
+            <div class="card"><div class="img"><span>image</span></div><div class="ln h w50"></div><span class="chip" style="width:max-content">estado</span></div>
+            <div class="card"><div class="img"><span>image</span></div><div class="ln h w60"></div><span class="chip" style="width:max-content">estado</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="next"><b>→</b>toque en un planeta</div>
+    <div>
+      <p class="cap">Móvil · Planeta (detalle)</p>
+      <div class="wf phone">
+        <div class="notch"><i></i></div>
+        <div class="screen">
+          <div class="btn">← Volver</div>
+          <div class="img" style="height:150px"><span>image</span></div>
+          <div class="ln h w60" style="height:18px"></div>
+          <div class="chips"><span class="chip">estado</span></div>
+          <div class="ln w100"></div><div class="ln w100"></div><div class="ln w70"></div>
+          <div class="lbl">Personajes de este planeta (opcional)</div>
+          <div class="thumbs"><div class="img" style="width:50px;height:50px"></div><div class="img" style="width:50px;height:50px"></div><div class="img" style="width:50px;height:50px"></div></div>
+        </div>
+      </div>
+    </div>
+  </div></div>
+
   <h2>Qué hace cada parte</h2>
   <ul class="legend">
     <li><b class="n">1</b><span><b>Búsqueda sencilla.</b> Un solo campo que filtra los personajes por nombre.</span></li>
@@ -203,6 +288,8 @@ th{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--mute
     <li><b class="n">3</b><span><b>Tarjetas.</b> Imagen, nombre y raza. Cuadrícula de 4 columnas en web y de 2 en móvil.</span></li>
     <li><b class="n">4</b><span><b>Volver.</b> Regresa al listado conservando la búsqueda y el filtro.</span></li>
     <li><b class="n">5</b><span><b>Detalle.</b> Imagen grande, datos, descripción, planeta de origen y transformaciones. Puede ser una pantalla o una ventana encima del listado: <b>decídelo y justifícalo</b>.</span></li>
+      <li><b class="n">6</b><span><b>Pestañas (bonus).</b> «Personajes» y «Planetas ★». Si no haces el bonus, solo existe «Personajes».</span></li>
+    <li><b class="n">7</b><span><b>Planeta de origen (bonus).</b> En el detalle de un personaje, un clic en su planeta lleva al detalle de ese planeta.</span></li>
   </ul>
 
   <h2>De dónde sale cada dato</h2>
@@ -213,6 +300,8 @@ th{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--mute
     <tr><td>Ki y Ki máximo</td><td><code>ki</code>, <code>maxKi</code></td><td>Lista y detalle (son texto)</td></tr>
     <tr><td>Descripción</td><td><code>description</code></td><td>Lista y detalle</td></tr>
     <tr><td>Planeta de origen y transformaciones</td><td><code>originPlanet</code>, <code>transformations</code></td><td>Solo detalle <code>/characters/{id}</code></td></tr>
+      <tr><td>★ Bonus: tarjeta de planeta</td><td><code>image</code>, <code>name</code>, <code>isDestroyed</code></td><td>Lista <code>/planets</code></td></tr>
+    <tr><td>★ Bonus: detalle de planeta</td><td><code>description</code> (y los campos de la tarjeta)</td><td>Lista <code>/planets</code> o su detalle: compruébalo con el JSON real</td></tr>
   </table></div>
 </main>
 <script>

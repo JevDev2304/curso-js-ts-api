@@ -80,6 +80,7 @@ ul.check input{position:absolute;left:0;top:9px;width:auto;margin:0;accent-color
       <li><a href="https://web.dragonball-api.com/documentation" target="_blank" rel="noopener">web.dragonball-api.com/documentation</a>: la documentación (endpoints, parámetros y ejemplos).</li>
       <li><a href="https://dragonball-api.com/api-docs" target="_blank" rel="noopener">dragonball-api.com/api-docs</a>: documentación interactiva (Swagger UI), donde puedes probar cada endpoint desde el navegador y ver la forma exacta de la respuesta.</li>
     </ul>
+    <b>Bonus ★:</b> si vas a hacer el bonus de planetas, explora también <code>/planets</code> (lista y detalle) y compara su forma con la de los personajes.<br>
     La documentación te da el mapa; <b>el JSON real manda</b>. Si algo no coincide, anótalo: puede ser una diferencia importante.
   </div>
   <p class="lead">Abre estas URLs en el navegador y lee el JSON: <a href="https://dragonball-api.com/api/characters?limit=5" target="_blank" rel="noopener">/characters?limit=5</a>, <a href="https://dragonball-api.com/api/characters/1" target="_blank" rel="noopener">/characters/1</a>, <a href="https://dragonball-api.com/api/characters?name=Goku" target="_blank" rel="noopener">/characters?name=Goku</a> y <code>/characters/99999</code>. Todas empiezan con <code>https://dragonball-api.com/api</code>. Completa con lo que <b>comprobaste</b>:</p>
@@ -111,6 +112,7 @@ ul.check input{position:absolute;left:0;top:9px;width:auto;margin:0;accent-color
     <li><label><input type="checkbox" data-id="d2"> Guarda en el README el <b>prompt</b> que usaste y <b>al menos una iteración</b>: qué pediste cambiar y por qué.</label></li>
     <li><label><input type="checkbox" data-id="d3"> Justifica el uso de cada color (¿cuál es el principal, cuál resalta, cuál es el fondo?) y revisa que el texto se lea bien sobre cada fondo.</label></li>
     <li><label><input type="checkbox" data-id="d4"> Decide y dibuja lo que el wireframe no muestra: estados de <b>cargando</b>, <b>error</b>, <b>sin resultados</b> y <b>hover</b>.</label></li>
+    <li><label><input type="checkbox" data-id="d5"> <b>★ Bonus planetas:</b> diseña también, con la misma herramienta y paleta, las pantallas de <b>planetas</b> (listado y detalle, web y móvil). Están en el apartado «Bonus · Planetas» del <a href="wireframe-dragonball.html" target="_blank" rel="noopener">wireframe</a>.</label></li>
   </ul>
 
   <h2>C · Construye <small>30 % + bonus</small></h2>
@@ -149,7 +151,7 @@ ul.check input{position:absolute;left:0;top:9px;width:auto;margin:0;accent-color
     <li><label><input type="checkbox" data-id="n5"> <b>Nivel 5 · Imágenes:</b> con <code>alt</code> y un plan si la imagen no carga.</label></li>
     <li><label><input type="checkbox" data-id="n6"> <b>Nivel 6 · Tailwind:</b> reemplaza el CSS, pon la paleta en la configuración de Tailwind y usa un <code>Record</code> de color por raza.</label></li>
     <li><label><input type="checkbox" data-id="n7"> <b>Nivel 7 · Buscador, filtros y detalle (tú diriges, sin guía paso a paso):</b> buscador por nombre, filtro por raza o afiliación y, al hacer clic en una tarjeta, el detalle (usa <code>/characters/{id}</code>). Funciona en web y en móvil.</label></li>
-    <li><label><input type="checkbox" data-id="n10"> <b>Git:</b> en tu GitHub (repositorio <b>público</b>) existen las ramas <code>nivel-1</code> … <code>nivel-7</code> (y <code>nivel-8</code> si haces el bonus), cada una con commits de mensaje claro, y tu README tiene la sección «Mis comandos de Git» escrita con tus palabras.</label></li>
+    <li><label><input type="checkbox" data-id="n10"> <b>Git:</b> en tu GitHub (repositorio <b>público</b>) existen las ramas <code>nivel-1</code> … <code>nivel-7</code> (y <code>bonus-planetas</code> y <code>nivel-8</code> si haces los bonus), cada una con commits de mensaje claro, y tu README tiene la sección «Mis comandos de Git» escrita con tus palabras.</label></li>
     <li><label><input type="checkbox" data-id="n9"> <b>Bitácora de conversación:</b> guarda en tu README al menos <b>3 momentos</b> en que cuestionaste o corregiste a la IA (un error suyo, una decisión que no entendiste, una alternativa que comparaste) y qué aprendiste.</label></li>
   </ul>
   <div class="card bonus">
@@ -160,7 +162,7 @@ ul.check input{position:absolute;left:0;top:9px;width:auto;margin:0;accent-color
     <p><b>Pasos</b></p>
     <ol>
       <li>Crea una cuenta gratuita en <a href="https://vercel.com" target="_blank" rel="noopener">vercel.com</a> (lo más fácil es entrar con tu cuenta de GitHub).</li>
-      <li>Con tu nivel 7 terminado y subido, crea la rama del bonus <b>desde</b> <code>nivel-7</code>: <code>git checkout nivel-7</code>, <code>git checkout -b nivel-8</code> y <code>git push -u origin nivel-8</code>. <b>Esa es la rama que vas a desplegar</b>; no hace falta tocar <code>main</code>.</li>
+      <li>Con tu nivel 7 terminado y subido, crea la rama del bonus <b>desde</b> <code>nivel-7</code>: <code>git checkout nivel-7</code>, <code>git checkout -b nivel-8</code> y <code>git push -u origin nivel-8</code> (si hiciste el bonus de planetas, créala desde <code>bonus-planetas</code> para publicarlos). <b>Esa es la rama que vas a desplegar</b>; no hace falta tocar <code>main</code>.</li>
       <li>Comprueba que en <code>nivel-8</code> existe <code>04-proyecto/dragonball/nivel7/</code> con tu <code>index.html</code> y tu <code>main.ts</code>, y que <code>npm run build</code> compila sin errores en tu computador. Si quieres ayuda guiada, usa <code>/asistir-bonus</code> en Claude Code o el prompt 7 de <code>docs/PROMPTS-CHAT.md</code>.</li>
       <li>En Vercel: <b>Add New → Project</b>, elige tu repositorio y pulsa <b>Import</b>. <b>El primer despliegue puede fallar</b>: Vercel empieza por <code>main</code>, que no tiene tu <code>nivel7</code>. Es normal.</li>
       <li>En el proyecto de Vercel entra a <b>Settings → Environments → Production → Branch Tracking</b>, cambia el nombre de la rama de <code>main</code> a <code>nivel-8</code> y pulsa <b>Save</b>. Así Vercel publica tu rama del bonus como «producción».</li>
@@ -181,6 +183,20 @@ ul.check input{position:absolute;left:0;top:9px;width:auto;margin:0;accent-color
       </ul>
     </details>
     <ul class="check"><li><label><input type="checkbox" data-id="n8"> Mi página está publicada y la URL está en el README.</label></li></ul>
+  </div>
+  <div class="card bonus"><b>Bonus · Planetas ★ (+5 %): diseño, código y despliegue.</b>
+    <p>Trabaja también con los <b>planetas</b> de Dragon Ball, no solo con los personajes. Tiene tres partes y las tres cuentan:</p>
+    <ol>
+      <li><b>Diseño:</b> con Stitch o Claude Design, el listado y el detalle de planetas en <b>web y móvil</b>, con la misma paleta (mira el apartado «Bonus · Planetas» del <a href="wireframe-dragonball.html" target="_blank" rel="noopener">wireframe</a>). Guarda el prompt y una iteración, como en la parte B.</li>
+      <li><b>Código:</b> una pestaña <b>Planetas</b> en tu página, con listado de <code>/planets</code> (imagen, nombre y si está destruido), búsqueda por nombre, filtro por estado y detalle al hacer clic. En el detalle de un personaje, su planeta de origen debe llevar al detalle de ese planeta. Define tu <code>interface</code> a partir del <b>JSON real</b> y reutiliza <code>getJSON&lt;T&gt;</code> y la idea del adaptador.</li>
+      <li><b>Despliegue:</b> los planetas deben verse en tu página publicada en Vercel. Por eso este bonus se completa junto con el nivel 8.</li>
+    </ol>
+    <p><b>Git:</b> haz el código de planetas en una rama <code>bonus-planetas</code> creada desde <code>nivel-7</code> (<code>git checkout nivel-7</code>, <code>git checkout -b bonus-planetas</code>), dentro de la misma carpeta <code>nivel7</code>. Si además haces el nivel 8, crea <code>nivel-8</code> <b>desde <code>bonus-planetas</code></b> para publicar la versión con planetas.</p>
+    <ul class="check">
+      <li><label><input type="checkbox" data-id="pl1"> Diseño de planetas (web y móvil) con prompt e iteración en el README.</label></li>
+      <li><label><input type="checkbox" data-id="pl2"> Pestaña Planetas con listado, búsqueda, filtro por estado y detalle, y enlace desde el planeta de origen.</label></li>
+      <li><label><input type="checkbox" data-id="pl3"> Los planetas funcionan en mi página publicada en Vercel.</label></li>
+    </ul>
   </div>
   <div class="card">Si copias la Pokédex tal cual, algo se va a romper porque esta API responde distinto. Es buena señal: anota en el README cada error, su causa y cómo lo resolviste.
     <details><summary>Pistas si te atascas</summary>
@@ -263,6 +279,7 @@ ul.check input{position:absolute;left:0;top:9px;width:auto;margin:0;accent-color
     <tr><td>D · Análisis de tu código</td><td>8 respuestas abiertas (un párrafo mínimo, con tus palabras, con evidencia de pruebas) y 4 de selección múltiple. Se valora la comprensión, no la redacción.</td><td>25</td></tr>
     <tr><td>Sustentación</td><td>Explica con seguridad y hace el cambio en vivo, aunque sea con ayuda de la IA.</td><td>15</td></tr>
     <tr><td>Bonus · Nivel 8</td><td>Página publicada en Vercel y funcionando.</td><td>+10</td></tr>
+    <tr><td>Bonus · Planetas ★</td><td>Diseño de planetas (web y móvil), código con listado, filtro y detalle, y publicado en Vercel (requiere el nivel 8).</td><td>+5</td></tr>
   </table></div>
 </main>
 
