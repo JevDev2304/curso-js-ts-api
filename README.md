@@ -1,5 +1,7 @@
 # Curso: JavaScript y TypeScript consumiendo APIs
 
+> **Módulo: Fundamentos de Frontend.** Este repositorio es el proyecto del módulo.
+
 Este repositorio trae **todo lo necesario** para repasar lo visto en clase y hacer el proyecto final. No tienes que buscar nada más: aquí están las guías, el código de ejemplo, el enunciado y las instrucciones paso a paso.
 
 > **¿Primera vez aquí?** Sigue la sección [Empieza en 10 minutos](#empieza-en-10-minutos) y listo.
@@ -16,6 +18,7 @@ Este repositorio trae **todo lo necesario** para repasar lo visto en clase y hac
 
 | Carpeta | Qué es | Para qué la usas |
 |---|---|---|
+| [`00-repaso-rapido/`](00-repaso-rapido/repaso-rapido.html) | **Repaso rápido** de toda la teoría del módulo, en una sola página | Antes de empezar y como chuleta durante el proyecto |
 | [`01-clase-html-css/`](01-clase-html-css/) | Guía interactiva de HTML y CSS, más el laboratorio «CSS en movimiento» (`andres.css`) | Repasar la base de la web y ver qué se logra con CSS |
 | [`02-clase-js-ts/`](02-clase-js-ts/) | Guía interactiva de JavaScript, `async/await`, `fetch` y TypeScript | Repasar lo de la clase de hoy |
 | [`03-pokedex-pasos/`](03-pokedex-pasos/) | La Pokédex en 7 pasos, con el código comentado | Ver cómo se construye una app con una API, paso a paso |
@@ -94,6 +97,7 @@ Entra a <http://localhost:5500>. Verás el menú con todo el curso. Para detener
 | # | Qué hacer | Dónde | Tiempo orientativo |
 |---|---|---|---|
 | 1 | Verificar tu ambiente | `npm run verificar` | 10 min |
+| 1b | Leer el repaso rápido de toda la teoría | [`00-repaso-rapido/repaso-rapido.html`](00-repaso-rapido/repaso-rapido.html) | 20 min |
 | 2 | Repasar HTML y CSS y explorar el laboratorio de CSS | `01-clase-html-css/` | 45 min |
 | 3 | Repasar JS, `async/await` y TypeScript | `02-clase-js-ts/` (ejecuta y modifica los ejemplos) | 1 h |
 | 4 | Recorrer la Pokédex paso a paso | `03-pokedex-pasos/index.html` | 1 h |
