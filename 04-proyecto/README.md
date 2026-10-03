@@ -7,7 +7,7 @@
 | Archivo o carpeta | Qué es |
 |---|---|
 | [`proyecto-estudiante.html`](proyecto-estudiante.html) | **El enunciado completo**: partes A a D, niveles, entrega, sustentación y rúbrica. Tus respuestas se guardan solas en el navegador |
-| [`wireframe-dragonball.html`](wireframe-dragonball.html) | El boceto de las 2 pantallas (listado y detalle) en web y móvil, con los campos de la API |
+| [`wireframe-dragonball.html`](wireframe-dragonball.html) | El boceto de las 2 pantallas (listado y detalle) en web y móvil, más el bonus de planetas, con los campos de la API |
 | [`dragonball/`](dragonball/) | **Tu carpeta de trabajo.** Aquí construyes los niveles |
 
 ## Cómo abrir el enunciado
@@ -73,6 +73,8 @@ git commit -m "Nivel 1: HTML con 5 personajes"   # guardar en mi historial
 git push -u origin nivel-1       # subir la rama a mi GitHub (la primera vez)
 git checkout -b nivel-2          # el nivel 2 nace desde el 1
 ```
+
+Si haces el bonus de planetas, el código va en una rama `bonus-planetas` creada desde `nivel-7`, y `nivel-8` nace desde ella.
 
 Para moverte entre niveles: `git checkout nivel-3`. Para traer cambios de GitHub: `git pull`. Si haces el bonus, crea la rama `nivel-8` desde `nivel-7` (`git checkout nivel-7`, `git checkout -b nivel-8`, `git push -u origin nivel-8`): es la que despliegas en Vercel.
 

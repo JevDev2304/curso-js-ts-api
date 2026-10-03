@@ -108,7 +108,7 @@ claude --version
 | `/preparar-ambiente` | La primera vez, o si algo no funciona en tu computador | Te guía paso a paso y explicando: verifica e instala lo que falte (Node, dependencias, Git), configura tu identidad de Git y abre el servidor local. Resuelve los errores contigo sin frenarte | No toca tu código |
 | `/repasar-clase` | Quieres repasar lo visto en clase (HTML/CSS, JS, `async/await`, TypeScript, Pokédex) | Te hace preguntas, te pone mini quiz y te manda a comprobar en los ejemplos. Te dice qué dominas y qué repasar. **Git y Vercel no se vieron en clase**: los trata como temas nuevos, no como repaso | No hace tu proyecto |
 | `/asistir-proyecto` | Estás trabajando en el proyecto Dragon Ball | Te entrega el código **por piezas pequeñas** en el chat, con archivo, lugar y por qué; crea la estructura de cada nivel, compila, te explica los errores, te dice qué comando de Git escribir y por qué (**los escribes tú**) y te pide explicar cada pieza antes de seguir | No escribe tus archivos, ni tus respuestas de análisis, ni tu README |
-| `/asistir-bonus` | Quieres publicar en Vercel (nivel 8) | Te dice qué comandos de Git escribir para la rama `nivel-8` (los escribes tú) y te guía en Vercel: rama de producción, despliegue y que la página sea pública. Diagnostica errores de despliegue | No maneja tus contraseñas; tú inicias sesión |
+| `/asistir-bonus` | Quieres publicar en Vercel (nivel 8; incluye los planetas si hiciste ese bonus) | Te dice qué comandos de Git escribir para la rama `nivel-8` (los escribes tú) y te guía en Vercel: rama de producción, despliegue y que la página sea pública. Diagnostica errores de despliegue | No maneja tus contraseñas; tú inicias sesión |
 
 ### Qué está limitado y por qué
 
