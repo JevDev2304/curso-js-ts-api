@@ -2,6 +2,6 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
   "installCommand": "npm install",
-  "buildCommand": "npm run build",
-  "outputDirectory": "04-proyecto/dragonball/nivel7"
+  "buildCommand": "npm run build:pokedex",
+  "outputDirectory": "03-pokedex-pasos/paso7"
 }
