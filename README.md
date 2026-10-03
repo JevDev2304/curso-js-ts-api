@@ -11,8 +11,9 @@ Este repositorio trae **todo lo necesario** para repasar lo visto en clase y hac
 ## Qué vas a hacer
 
 1. **Repasar** lo que ya viste en clase (HTML/CSS, JavaScript, `async/await`, `fetch`, TypeScript y la Pokédex).
-2. **Hacer el proyecto Dragon Ball**: explorar una API nueva, diseñar la página, construirla por niveles y analizar tu propio código.
-3. **(Bonus)** Publicar tu página en internet con Vercel.
+2. **Aprender Git básico** (tema nuevo, no visto en clase): ramas, commits y subir tu trabajo a GitHub.
+3. **Hacer el proyecto Dragon Ball**: explorar una API nueva, diseñar la página, construirla por niveles (una rama de Git por nivel) y analizar tu propio código.
+4. **(Bonus)** Publicar tu página en internet con Vercel.
 
 ## Qué hay en cada carpeta
 
@@ -20,11 +21,14 @@ Este repositorio trae **todo lo necesario** para repasar lo visto en clase y hac
 |---|---|---|
 | [`00-repaso-rapido/`](00-repaso-rapido/repaso-rapido.html) | **Repaso rápido** de toda la teoría del módulo, en una sola página | Antes de empezar y como chuleta durante el proyecto |
 | [`01-clase-html-css/`](01-clase-html-css/) | Guía interactiva de HTML y CSS, más el laboratorio «CSS en movimiento» (`andres.css`) | Repasar la base de la web y ver qué se logra con CSS |
-| [`02-clase-js-ts/`](02-clase-js-ts/) | Guía interactiva de JavaScript, `async/await`, `fetch` y TypeScript | Repasar lo de la clase de hoy |
+| [`02-clase-js-ts/`](02-clase-js-ts/) | Guía interactiva de JavaScript, `async/await`, `fetch` y TypeScript | Repasar la clase de JavaScript y TypeScript |
 | [`03-pokedex-pasos/`](03-pokedex-pasos/) | La Pokédex en 7 pasos, con el código comentado | Ver cómo se construye una app con una API, paso a paso |
 | [`04-proyecto/`](04-proyecto/) | **Tu proyecto**: enunciado, wireframe y la carpeta `dragonball/` donde trabajas | El ejercicio |
 | [`docs/`](docs/) | Instalación, **Git básico**, uso de la IA y solución de problemas | Cuando algo no funcione o necesites un comando |
 | `scripts/` | Pequeños programas que verifican tu ambiente y abren un servidor local | Ya están listos, solo los ejecutas |
+| `index.html` | El menú de todo el material | Ábrelo con `npm run servir` |
+| `vercel.toml` | Configuración de Vercel, con un comentario en cada línea | La lees en el bonus (nivel 8) |
+| `CLAUDE.md` y `.claude/` | La configuración del tutor de Claude Code | No hace falta tocarla |
 
 ---
 
@@ -32,7 +36,7 @@ Este repositorio trae **todo lo necesario** para repasar lo visto en clase y hac
 
 ### Opción A (recomendada): deja que Claude Code te guíe
 
-Ya tienes Claude Code, así que no hace falta que descifres una guía de instalación. Abre una terminal, escribe `claude` y pega el prompt de arranque. Tu Claude te guía **paso a paso**: revisa qué tienes instalado, te ayuda con lo que falte, crea tu repositorio contigo, instala las dependencias y verifica que todo funciona, explicándote cada cosa.
+Si ya tienes Claude Code, no hace falta que descifres una guía de instalación. Abre una terminal, escribe `claude` y pega el prompt de arranque. Tu Claude te guía **paso a paso**: revisa qué tienes instalado, te ayuda con lo que falte, crea tu repositorio contigo, instala las dependencias y verifica que todo funciona, explicándote cada cosa.
 
 👉 El prompt está en [`docs/INSTALACION.md`](docs/INSTALACION.md#camino-a-recomendado-claude-code-te-guía).
 
@@ -51,7 +55,7 @@ Guía completa para Windows, Mac y Linux: [`docs/INSTALACION.md`](docs/INSTALACI
 
 ### Paso a paso (opción B)
 
-**1. Consigue tu copia del repositorio.** La forma más fácil: en la página del repositorio (<https://github.com/JevDev2304/curso-js-ts-api>) pulsa **Use this template → Create a new repository**, ponle un nombre y créalo. Así tienes tu propio repositorio. Luego cópialo a tu computador (reemplaza la dirección por la tuya):
+**1. Consigue tu copia del repositorio.** La forma más fácil: en la página del repositorio (<https://github.com/JevDev2304/curso-js-ts-api>) pulsa **Use this template → Create a new repository**, ponle un nombre, déjalo **Public** y créalo. Así tienes tu propio repositorio. Luego cópialo a tu computador (reemplaza la dirección por la tuya):
 
 ```bash
 git clone https://github.com/TU-USUARIO/NOMBRE-DE-TU-REPO.git
@@ -97,6 +101,17 @@ Entra a <http://localhost:5500>. Verás el menú con todo el curso. Para detener
 | # | Qué hacer | Dónde | Tiempo orientativo |
 |---|---|---|---|
 | 1 | Verificar tu ambiente | `npm run verificar` | 10 min |
+| 2 | Leer el repaso rápido de toda la teoría | [`00-repaso-rapido/repaso-rapido.html`](00-repaso-rapido/repaso-rapido.html) | 20 min |
+| 3 | Repasar HTML y CSS y explorar el laboratorio de CSS | `01-clase-html-css/` | 45 min |
+| 4 | Repasar JS, `async/await` y TypeScript | `02-clase-js-ts/` (ejecuta y modifica los ejemplos) | 1 h |
+| 5 | Recorrer la Pokédex paso a paso | `03-pokedex-pasos/index.html` | 1 h |
+| 6 | Aprender Git básico (ramas, commit, push). **Tema nuevo, no visto en clase**; se retoma en Angular | [video intro de 2:30](https://www.youtube.com/watch?v=DinilgacaWs) → [`docs/GIT-BASICO.md`](docs/GIT-BASICO.md) → [curso completo](https://www.youtube.com/watch?v=T3roQrB_Jko&list=PLJ7sTTLrIA6klMtrvcpGXYkBFoUP3rqwo) (opcional) | 45 min |
+| 7 | Leer el enunciado y mirar el wireframe | `04-proyecto/proyecto-estudiante.html` | 20 min |
+| 8 | Hacer el proyecto (partes A a D), **una rama de Git por nivel** | `04-proyecto/dragonball/` | varios días |
+| 9 | *(Bonus)* Publicar en Vercel (mira antes el [ejemplo resuelto](https://github.com/JevDev2304/curso-js-ts-api/tree/deploy-vercel-pokeapi-nivel-8)) | [nivel 8 del enunciado](04-proyecto/proyecto-estudiante.html) | 30 min |
+
+---|---|---|---|
+| 1 | Verificar tu ambiente | `npm run verificar` | 10 min |
 | 1b | Leer el repaso rápido de toda la teoría | [`00-repaso-rapido/repaso-rapido.html`](00-repaso-rapido/repaso-rapido.html) | 20 min |
 | 2 | Repasar HTML y CSS y explorar el laboratorio de CSS | `01-clase-html-css/` | 45 min |
 | 3 | Repasar JS, `async/await` y TypeScript | `02-clase-js-ts/` (ejecuta y modifica los ejemplos) | 1 h |
@@ -119,7 +134,7 @@ Hoy nadie teclea todo desde cero, así que **no tienes que escribir el código a
 5. Se lo **explicas con tus palabras** y lo conversas: preguntas por qué, comparas alternativas y corriges a la IA cuando se equivoca (con esta API pasará).
 
 - **Recomendado: el chat de [Claude](https://claude.ai) o de [Gemini](https://gemini.google.com).** Te da el código en bloques y tú lo acomodas. En [`docs/PROMPTS-CHAT.md`](docs/PROMPTS-CHAT.md) hay un prompt listo para copiar que convierte al chat en tu tutor.
-- **Opcional: Claude Code**, ya configurado en este repositorio como tutor con cuatro comandos: `/preparar-ambiente`, `/repasar-clase`, `/asistir-proyecto` y `/asistir-bonus`. Está limitado a propósito: te entrega el código en la conversación en lugar de escribir tus archivos, para que seas tú quien lo acomoda. Mira [`docs/USAR-IA.md`](docs/USAR-IA.md).
+- **Opcional: Claude Code**, ya configurado en este repositorio como tutor con cuatro comandos: `/preparar-ambiente`, `/repasar-clase`, `/asistir-proyecto` y `/asistir-bonus`. Está limitado a propósito: te entrega el código en la conversación en lugar de escribir tus archivos, para que seas tú quien lo acomoda. **Los comandos de Git los escribes tú**; Claude te dice cuál y qué hace. Mira [`docs/USAR-IA.md`](docs/USAR-IA.md).
 - **Lo que sí escribes tú, con tus palabras:** las respuestas de análisis (Parte D) y tu README, mínimo un párrafo por respuesta. No pegues texto generado por una IA.
 - Todo lo vas a **sustentar en vivo**.
 
@@ -130,7 +145,7 @@ Hoy nadie teclea todo desde cero, así que **no tienes que escribir el código a
 Tu repositorio de GitHub, **que debe ser público**, con:
 
 - La carpeta `04-proyecto/dragonball/` con tus niveles (`nivel1` … `nivel7`), **subidos a GitHub en una rama por nivel** (`nivel-1` … `nivel-7`, y `nivel-8` si haces el bonus de Vercel).
-- `04-proyecto/dragonball/README.md` completo (hay una plantilla): tus respuestas, tu diseño, tus decisiones, la bitácora de errores y la bitácora de conversación con la IA.
+- `04-proyecto/dragonball/README.md` completo (hay una plantilla): tus respuestas, tu diseño, tus decisiones, la bitácora de errores, la bitácora de conversación con la IA y la sección «Mis comandos de Git» con tus palabras.
 - *(Bonus)* La URL de tu página publicada en Vercel.
 
 Los detalles y la rúbrica están en [`04-proyecto/proyecto-estudiante.html`](04-proyecto/proyecto-estudiante.html).
@@ -147,6 +162,7 @@ Los detalles y la rúbrica están en [`04-proyecto/proyecto-estudiante.html`](04
 | `npm run build:pokedex` | Recompila la Pokédex (por si modificas sus `.ts`) |
 | `npm run nivel -- 3` | Crea la carpeta `nivel3/` de tu proyecto con la configuración lista |
 | `npm run build` | Compila los `main.ts` de tus niveles a `main.js` y revisa los tipos |
+| `npm run servir -- 5600` | Abre el servidor en otro puerto si el 5500 está ocupado |
 
 Para Git (rama por nivel, `add`, `commit`, `push`, `pull`) mira [`docs/GIT-BASICO.md`](docs/GIT-BASICO.md).
 
