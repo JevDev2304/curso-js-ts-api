@@ -20,7 +20,7 @@ y entra a <http://localhost:5500/04-proyecto/proyecto-estudiante.html>. También
 
 ## Orden de trabajo
 
-1. **Parte A · Explora la API**: abre las URLs en el navegador, completa la tabla comparativa y escribe tus `interface`.
+1. **Parte A · Explora la API**: lee la documentación ([sitio](https://web.dragonball-api.com/), [documentación](https://web.dragonball-api.com/documentation) y [Swagger interactivo](https://dragonball-api.com/api-docs)), abre las URLs en el navegador, completa la tabla comparativa y define tus `interface`.
 2. **Parte B · Diseña**: con el wireframe y la paleta, genera el diseño completo (web y móvil) en [Claude Design](https://claude.ai/design) o [Google Stitch](https://stitch.withgoogle.com). Guarda tu prompt y una iteración.
 3. **Parte C · Construye** los niveles 1 a 7 dentro de `dragonball/`, **una rama de Git por nivel**.
 4. **Parte D · Analiza tu código**: 8 preguntas abiertas (un párrafo mínimo, con tus palabras) y 4 de selección múltiple.
