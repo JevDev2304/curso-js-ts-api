@@ -78,7 +78,7 @@ outputDirectory = "03-pokedex-pasos/paso7"
 | Este ejemplo | Tu proyecto |
 |---|---|
 | Repositorio `curso-js-ts-api` | **Tu** repositorio público |
-| Rama desplegada: `deploy-vercel-pokeapi-nivel-8` | Rama desplegada: **`nivel-8`** (creada desde `nivel-7`: `git checkout nivel-7`, `git checkout -b nivel-8`, `git push -u origin nivel-8`) |
+| Rama desplegada: `deploy-vercel-pokeapi-nivel-8` | Rama desplegada: **`nivel-8`** (creada desde `nivel-7`: `git checkout nivel-7`, `git checkout -b nivel-8`, `git push -u origin nivel-8`) Si hiciste el bonus de planetas, créala **desde `bonus-planetas`** para que la página publicada los incluya) |
 | Branch Tracking de Production = `deploy-vercel-pokeapi-nivel-8` | Branch Tracking de Production = **`nivel-8`** |
 | Página: Pokédex paso 7 (`03-pokedex-pasos/paso7`) | Página: tu `04-proyecto/dragonball/nivel7` |
 | Script de build: `npm run build:pokedex` | Script de build: `npm run build` |
